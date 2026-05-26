@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router"
-import { AuthLayout } from "../layouts/auth"
-import { DashboardLayout } from "../layouts/dashboard"
-import { HomePage } from "../pages/home"
-import { SignInPage } from "../pages/sign-in"
+import { AuthLayout } from "@/layouts/auth"
+import { DashboardLayout } from "@/layouts/dashboard"
+import { HomePage } from "@/pages/home"
+import { SignInPage } from "@/pages/sign-in"
 
 export const routes = createBrowserRouter([
 	{

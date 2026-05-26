@@ -1,1082 +1,1082 @@
 [
-  {
-    "garageId": "000610",
-    "address": "Marginal Margarida, 682",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 411,
-    "occupiedSpots": 162,
-    "availableSpots": 249,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000610"
-  },
-  {
-    "garageId": "000611",
-    "address": "Avenida Maria Eduarda, 1116",
-    "filial": "Filial Empresarial",
-    "totalSpots": 450,
-    "occupiedSpots": 334,
-    "availableSpots": 116,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000611"
-  },
-  {
-    "garageId": "000612",
-    "address": "Avenida Xavier, 5929",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 250,
-    "occupiedSpots": 195,
-    "availableSpots": 55,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000612"
-  },
-  {
-    "garageId": "000613",
-    "address": "Travessa Moreira, 7429",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 345,
-    "occupiedSpots": 124,
-    "availableSpots": 221,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000613"
-  },
-  {
-    "garageId": "000614",
-    "address": "Marginal Ricardo, 32345",
-    "filial": "Filial Paulista",
-    "totalSpots": 467,
-    "occupiedSpots": 325,
-    "availableSpots": 142,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000614"
-  },
-  {
-    "garageId": "000615",
-    "address": "Marginal Elísio, 855",
-    "filial": "Filial Centro",
-    "totalSpots": 347,
-    "occupiedSpots": 256,
-    "availableSpots": 91,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000615"
-  },
-  {
-    "garageId": "000616",
-    "address": "Marginal Víctor, 14079",
-    "filial": "Filial Jardins",
-    "totalSpots": 517,
-    "occupiedSpots": 434,
-    "availableSpots": 83,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000616"
-  },
-  {
-    "garageId": "000617",
-    "address": "Avenida Moreira, 89209",
-    "filial": "Filial Boa Viagem",
-    "totalSpots": 617,
-    "occupiedSpots": 576,
-    "availableSpots": 41,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000617"
-  },
-  {
-    "garageId": "000618",
-    "address": "Travessa Fábio, 885",
-    "filial": "Filial Boa Viagem",
-    "totalSpots": 560,
-    "occupiedSpots": 454,
-    "availableSpots": 106,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000618"
-  },
-  {
-    "garageId": "000619",
-    "address": "Rua Macedo, 4790",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 283,
-    "occupiedSpots": 170,
-    "availableSpots": 113,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000619"
-  },
-  {
-    "garageId": "000620",
-    "address": "Rua Maria Cecília, 71755",
-    "filial": "Filial Shopping",
-    "totalSpots": 276,
-    "occupiedSpots": 199,
-    "availableSpots": 77,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000620"
-  },
-  {
-    "garageId": "000621",
-    "address": "Marginal Albuquerque, 1537",
-    "filial": "Filial Paulista",
-    "totalSpots": 626,
-    "occupiedSpots": 437,
-    "availableSpots": 189,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000621"
-  },
-  {
-    "garageId": "000622",
-    "address": "Marginal Pereira, 15688",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 92,
-    "occupiedSpots": 59,
-    "availableSpots": 33,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000622"
-  },
-  {
-    "garageId": "000623",
-    "address": "Travessa Pedro, 7989",
-    "filial": "Filial Boa Viagem",
-    "totalSpots": 399,
-    "occupiedSpots": 247,
-    "availableSpots": 152,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000623"
-  },
-  {
-    "garageId": "000624",
-    "address": "Rua Caio, 972",
-    "filial": "Filial Savassi",
-    "totalSpots": 482,
-    "occupiedSpots": 420,
-    "availableSpots": 62,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000624"
-  },
-  {
-    "garageId": "000625",
-    "address": "Rodovia Reis, 6459",
-    "filial": "Filial Shopping",
-    "totalSpots": 232,
-    "occupiedSpots": 197,
-    "availableSpots": 35,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000625"
-  },
-  {
-    "garageId": "000626",
-    "address": "Travessa Moraes, 3518",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 274,
-    "occupiedSpots": 123,
-    "availableSpots": 151,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000626"
-  },
-  {
-    "garageId": "000627",
-    "address": "Avenida Warley, 2607",
-    "filial": "Filial Shopping",
-    "totalSpots": 469,
-    "occupiedSpots": 404,
-    "availableSpots": 65,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000627"
-  },
-  {
-    "garageId": "000628",
-    "address": "Avenida Benjamin, 849",
-    "filial": "Filial Empresarial",
-    "totalSpots": 80,
-    "occupiedSpots": 33,
-    "availableSpots": 47,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000628"
-  },
-  {
-    "garageId": "000629",
-    "address": "Travessa Nogueira, 15089",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 223,
-    "occupiedSpots": 84,
-    "availableSpots": 139,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000629"
-  },
-  {
-    "garageId": "000630",
-    "address": "Marginal Melo, 7537",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 451,
-    "occupiedSpots": 270,
-    "availableSpots": 181,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000630"
-  },
-  {
-    "garageId": "000631",
-    "address": "Avenida Braga, 75648",
-    "filial": "Filial Centro",
-    "totalSpots": 436,
-    "occupiedSpots": 340,
-    "availableSpots": 96,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000631"
-  },
-  {
-    "garageId": "000632",
-    "address": "Rodovia Batista, 9487",
-    "filial": "Filial Centro",
-    "totalSpots": 557,
-    "occupiedSpots": 385,
-    "availableSpots": 172,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000632"
-  },
-  {
-    "garageId": "000633",
-    "address": "Marginal Reis, 85678",
-    "filial": "Filial Paulista",
-    "totalSpots": 260,
-    "occupiedSpots": 212,
-    "availableSpots": 48,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000633"
-  },
-  {
-    "garageId": "000634",
-    "address": "Marginal Xavier, 86940",
-    "filial": "Filial Savassi",
-    "totalSpots": 178,
-    "occupiedSpots": 172,
-    "availableSpots": 6,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000634"
-  },
-  {
-    "garageId": "000635",
-    "address": "Alameda Costa, 861",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 531,
-    "occupiedSpots": 187,
-    "availableSpots": 344,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000635"
-  },
-  {
-    "garageId": "000636",
-    "address": "Rua Maria Helena, 9450",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 83,
-    "occupiedSpots": 60,
-    "availableSpots": 23,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000636"
-  },
-  {
-    "garageId": "000637",
-    "address": "Rua Fabiano, 1595",
-    "filial": "Filial Jardins",
-    "totalSpots": 533,
-    "occupiedSpots": 186,
-    "availableSpots": 347,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000637"
-  },
-  {
-    "garageId": "000638",
-    "address": "Marginal Júlio, 64471",
-    "filial": "Filial Jardins",
-    "totalSpots": 233,
-    "occupiedSpots": 118,
-    "availableSpots": 115,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000638"
-  },
-  {
-    "garageId": "000639",
-    "address": "Rua Gúbio, 68147",
-    "filial": "Filial Boa Viagem",
-    "totalSpots": 555,
-    "occupiedSpots": 410,
-    "availableSpots": 145,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000639"
-  },
-  {
-    "garageId": "000640",
-    "address": "Avenida Rebeca, 4033",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 565,
-    "occupiedSpots": 248,
-    "availableSpots": 317,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000640"
-  },
-  {
-    "garageId": "000641",
-    "address": "Alameda Valentina, 56598",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 474,
-    "occupiedSpots": 351,
-    "availableSpots": 123,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000641"
-  },
-  {
-    "garageId": "000642",
-    "address": "Rodovia Eduarda, 8793",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 273,
-    "occupiedSpots": 143,
-    "availableSpots": 130,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000642"
-  },
-  {
-    "garageId": "000643",
-    "address": "Rua Albuquerque, 26773",
-    "filial": "Filial Jardins",
-    "totalSpots": 252,
-    "occupiedSpots": 203,
-    "availableSpots": 49,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000643"
-  },
-  {
-    "garageId": "000644",
-    "address": "Travessa Kléber, 331",
-    "filial": "Filial Shopping",
-    "totalSpots": 188,
-    "occupiedSpots": 137,
-    "availableSpots": 51,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000644"
-  },
-  {
-    "garageId": "000645",
-    "address": "Avenida Santos, 5311",
-    "filial": "Filial Boa Viagem",
-    "totalSpots": 215,
-    "occupiedSpots": 77,
-    "availableSpots": 138,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000645"
-  },
-  {
-    "garageId": "000646",
-    "address": "Travessa Batista, 486",
-    "filial": "Filial Jardins",
-    "totalSpots": 396,
-    "occupiedSpots": 370,
-    "availableSpots": 26,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000646"
-  },
-  {
-    "garageId": "000647",
-    "address": "Rua Pedro Henrique, 8523",
-    "filial": "Filial Jardins",
-    "totalSpots": 412,
-    "occupiedSpots": 392,
-    "availableSpots": 20,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000647"
-  },
-  {
-    "garageId": "000648",
-    "address": "Marginal Guilherme, 61570",
-    "filial": "Filial Savassi",
-    "totalSpots": 513,
-    "occupiedSpots": 371,
-    "availableSpots": 142,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000648"
-  },
-  {
-    "garageId": "000649",
-    "address": "Travessa Kléber, 4688",
-    "filial": "Filial Centro",
-    "totalSpots": 440,
-    "occupiedSpots": 240,
-    "availableSpots": 200,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000649"
-  },
-  {
-    "garageId": "000650",
-    "address": "Rua Fabrício, 4212",
-    "filial": "Filial Paulista",
-    "totalSpots": 603,
-    "occupiedSpots": 583,
-    "availableSpots": 20,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000650"
-  },
-  {
-    "garageId": "000651",
-    "address": "Rodovia Braga, 2441",
-    "filial": "Filial Shopping",
-    "totalSpots": 115,
-    "occupiedSpots": 69,
-    "availableSpots": 46,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000651"
-  },
-  {
-    "garageId": "000652",
-    "address": "Rodovia Maria, 159",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 305,
-    "occupiedSpots": 275,
-    "availableSpots": 30,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000652"
-  },
-  {
-    "garageId": "000653",
-    "address": "Avenida Moreira, 50542",
-    "filial": "Filial Empresarial",
-    "totalSpots": 139,
-    "occupiedSpots": 71,
-    "availableSpots": 68,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000653"
-  },
-  {
-    "garageId": "000654",
-    "address": "Marginal Maitê, 550",
-    "filial": "Filial Centro",
-    "totalSpots": 519,
-    "occupiedSpots": 438,
-    "availableSpots": 81,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000654"
-  },
-  {
-    "garageId": "000655",
-    "address": "Avenida Macedo, 48845",
-    "filial": "Filial Centro",
-    "totalSpots": 560,
-    "occupiedSpots": 424,
-    "availableSpots": 136,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000655"
-  },
-  {
-    "garageId": "000656",
-    "address": "Rua Braga, 457",
-    "filial": "Filial Savassi",
-    "totalSpots": 562,
-    "occupiedSpots": 533,
-    "availableSpots": 29,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000656"
-  },
-  {
-    "garageId": "000657",
-    "address": "Travessa Sílvia, 33938",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 456,
-    "occupiedSpots": 392,
-    "availableSpots": 64,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000657"
-  },
-  {
-    "garageId": "000658",
-    "address": "Alameda Beatriz, 454",
-    "filial": "Filial Empresarial",
-    "totalSpots": 390,
-    "occupiedSpots": 273,
-    "availableSpots": 117,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000658"
-  },
-  {
-    "garageId": "000659",
-    "address": "Alameda Júlio, 82468",
-    "filial": "Filial Centro",
-    "totalSpots": 453,
-    "occupiedSpots": 407,
-    "availableSpots": 46,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000659"
-  },
-  {
-    "garageId": "000660",
-    "address": "Rodovia Martins, 3533",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 238,
-    "occupiedSpots": 157,
-    "availableSpots": 81,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000660"
-  },
-  {
-    "garageId": "000661",
-    "address": "Avenida Eloá, 52870",
-    "filial": "Filial Savassi",
-    "totalSpots": 468,
-    "occupiedSpots": 198,
-    "availableSpots": 270,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000661"
-  },
-  {
-    "garageId": "000662",
-    "address": "Travessa Vitor, 82247",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 321,
-    "occupiedSpots": 258,
-    "availableSpots": 63,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000662"
-  },
-  {
-    "garageId": "000663",
-    "address": "Alameda Ana Luiza, 85009",
-    "filial": "Filial Centro",
-    "totalSpots": 432,
-    "occupiedSpots": 156,
-    "availableSpots": 276,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000663"
-  },
-  {
-    "garageId": "000664",
-    "address": "Marginal Talita, 665",
-    "filial": "Filial Empresarial",
-    "totalSpots": 549,
-    "occupiedSpots": 345,
-    "availableSpots": 204,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000664"
-  },
-  {
-    "garageId": "000665",
-    "address": "Rua Lorena, 5580",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 608,
-    "occupiedSpots": 566,
-    "availableSpots": 42,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000665"
-  },
-  {
-    "garageId": "000666",
-    "address": "Travessa Sarah, 94776",
-    "filial": "Filial Shopping",
-    "totalSpots": 429,
-    "occupiedSpots": 181,
-    "availableSpots": 248,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000666"
-  },
-  {
-    "garageId": "000667",
-    "address": "Rua Braga, 62175",
-    "filial": "Filial Boa Viagem",
-    "totalSpots": 614,
-    "occupiedSpots": 510,
-    "availableSpots": 104,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000667"
-  },
-  {
-    "garageId": "000668",
-    "address": "Travessa Macedo, 2630",
-    "filial": "Filial Savassi",
-    "totalSpots": 404,
-    "occupiedSpots": 163,
-    "availableSpots": 241,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000668"
-  },
-  {
-    "garageId": "000669",
-    "address": "Marginal Lara, 981",
-    "filial": "Filial Shopping",
-    "totalSpots": 183,
-    "occupiedSpots": 129,
-    "availableSpots": 54,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000669"
-  },
-  {
-    "garageId": "000670",
-    "address": "Rua Enzo, 854",
-    "filial": "Filial Jardins",
-    "totalSpots": 315,
-    "occupiedSpots": 171,
-    "availableSpots": 144,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000670"
-  },
-  {
-    "garageId": "000671",
-    "address": "Marginal Tertuliano, 7571",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 456,
-    "occupiedSpots": 279,
-    "availableSpots": 177,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000671"
-  },
-  {
-    "garageId": "000672",
-    "address": "Marginal Macedo, 99037",
-    "filial": "Filial Jardins",
-    "totalSpots": 402,
-    "occupiedSpots": 269,
-    "availableSpots": 133,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000672"
-  },
-  {
-    "garageId": "000673",
-    "address": "Alameda Márcia, 960",
-    "filial": "Filial Shopping",
-    "totalSpots": 619,
-    "occupiedSpots": 426,
-    "availableSpots": 193,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000673"
-  },
-  {
-    "garageId": "000674",
-    "address": "Travessa Barros, 215",
-    "filial": "Filial Shopping",
-    "totalSpots": 633,
-    "occupiedSpots": 561,
-    "availableSpots": 72,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000674"
-  },
-  {
-    "garageId": "000675",
-    "address": "Rua Melo, 16667",
-    "filial": "Filial Jardins",
-    "totalSpots": 545,
-    "occupiedSpots": 326,
-    "availableSpots": 219,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000675"
-  },
-  {
-    "garageId": "000676",
-    "address": "Marginal Moreira, 25040",
-    "filial": "Filial Shopping",
-    "totalSpots": 158,
-    "occupiedSpots": 80,
-    "availableSpots": 78,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000676"
-  },
-  {
-    "garageId": "000677",
-    "address": "Avenida Natália, 13210",
-    "filial": "Filial Savassi",
-    "totalSpots": 249,
-    "occupiedSpots": 121,
-    "availableSpots": 128,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000677"
-  },
-  {
-    "garageId": "000678",
-    "address": "Avenida Macedo, 1016",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 351,
-    "occupiedSpots": 148,
-    "availableSpots": 203,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000678"
-  },
-  {
-    "garageId": "000679",
-    "address": "Travessa Saraiva, 4725",
-    "filial": "Filial Empresarial",
-    "totalSpots": 143,
-    "occupiedSpots": 100,
-    "availableSpots": 43,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000679"
-  },
-  {
-    "garageId": "000680",
-    "address": "Rua Clara, 263",
-    "filial": "Filial Savassi",
-    "totalSpots": 599,
-    "occupiedSpots": 473,
-    "availableSpots": 126,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000680"
-  },
-  {
-    "garageId": "000681",
-    "address": "Rua Vitor, 8294",
-    "filial": "Filial Boa Viagem",
-    "totalSpots": 292,
-    "occupiedSpots": 134,
-    "availableSpots": 158,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000681"
-  },
-  {
-    "garageId": "000682",
-    "address": "Avenida Dalila, 19720",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 632,
-    "occupiedSpots": 531,
-    "availableSpots": 101,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000682"
-  },
-  {
-    "garageId": "000683",
-    "address": "Marginal Elisa, 804",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 208,
-    "occupiedSpots": 112,
-    "availableSpots": 96,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000683"
-  },
-  {
-    "garageId": "000684",
-    "address": "Alameda Lucca, 4152",
-    "filial": "Filial Paulista",
-    "totalSpots": 307,
-    "occupiedSpots": 220,
-    "availableSpots": 87,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000684"
-  },
-  {
-    "garageId": "000685",
-    "address": "Alameda Sarah, 4169",
-    "filial": "Filial Centro",
-    "totalSpots": 255,
-    "occupiedSpots": 239,
-    "availableSpots": 16,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000685"
-  },
-  {
-    "garageId": "000686",
-    "address": "Rodovia Núbia, 375",
-    "filial": "Filial Empresarial",
-    "totalSpots": 457,
-    "occupiedSpots": 396,
-    "availableSpots": 61,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000686"
-  },
-  {
-    "garageId": "000687",
-    "address": "Marginal Arthur, 1811",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 83,
-    "occupiedSpots": 41,
-    "availableSpots": 42,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000687"
-  },
-  {
-    "garageId": "000688",
-    "address": "Rua Xavier, 899",
-    "filial": "Filial Jardins",
-    "totalSpots": 463,
-    "occupiedSpots": 423,
-    "availableSpots": 40,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000688"
-  },
-  {
-    "garageId": "000689",
-    "address": "Rua Moraes, 494",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 450,
-    "occupiedSpots": 333,
-    "availableSpots": 117,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000689"
-  },
-  {
-    "garageId": "000690",
-    "address": "Avenida Yasmin, 724",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 413,
-    "occupiedSpots": 232,
-    "availableSpots": 181,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000690"
-  },
-  {
-    "garageId": "000691",
-    "address": "Travessa Xavier, 79734",
-    "filial": "Filial Paulista",
-    "totalSpots": 113,
-    "occupiedSpots": 104,
-    "availableSpots": 9,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000691"
-  },
-  {
-    "garageId": "000692",
-    "address": "Travessa Melo, 4957",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 250,
-    "occupiedSpots": 236,
-    "availableSpots": 14,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000692"
-  },
-  {
-    "garageId": "000693",
-    "address": "Rodovia Enzo Gabriel, 911",
-    "filial": "Filial Centro",
-    "totalSpots": 188,
-    "occupiedSpots": 179,
-    "availableSpots": 9,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000693"
-  },
-  {
-    "garageId": "000694",
-    "address": "Rodovia Giovanna, 808",
-    "filial": "Filial Jardins",
-    "totalSpots": 140,
-    "occupiedSpots": 71,
-    "availableSpots": 69,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000694"
-  },
-  {
-    "garageId": "000695",
-    "address": "Marginal Xavier, 37330",
-    "filial": "Filial Centro",
-    "totalSpots": 499,
-    "occupiedSpots": 258,
-    "availableSpots": 241,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000695"
-  },
-  {
-    "garageId": "000696",
-    "address": "Travessa Heitor, 11699",
-    "filial": "Filial Savassi",
-    "totalSpots": 405,
-    "occupiedSpots": 285,
-    "availableSpots": 120,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000696"
-  },
-  {
-    "garageId": "000697",
-    "address": "Rua Lavínia, 24474",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 90,
-    "occupiedSpots": 87,
-    "availableSpots": 3,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000697"
-  },
-  {
-    "garageId": "000698",
-    "address": "Travessa Miguel, 71624",
-    "filial": "Filial Savassi",
-    "totalSpots": 188,
-    "occupiedSpots": 143,
-    "availableSpots": 45,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000698"
-  },
-  {
-    "garageId": "000699",
-    "address": "Rodovia Júlio, 77823",
-    "filial": "Filial Jardins",
-    "totalSpots": 643,
-    "occupiedSpots": 591,
-    "availableSpots": 52,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000699"
-  },
-  {
-    "garageId": "000700",
-    "address": "Avenida Salvador, 6588",
-    "filial": "Filial Boa Viagem",
-    "totalSpots": 559,
-    "occupiedSpots": 399,
-    "availableSpots": 160,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000700"
-  },
-  {
-    "garageId": "000701",
-    "address": "Alameda Ana Clara, 7845",
-    "filial": "Filial Jardins",
-    "totalSpots": 110,
-    "occupiedSpots": 39,
-    "availableSpots": 71,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000701"
-  },
-  {
-    "garageId": "000702",
-    "address": "Alameda Oliveira, 6137",
-    "filial": "Filial Centro",
-    "totalSpots": 593,
-    "occupiedSpots": 523,
-    "availableSpots": 70,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000702"
-  },
-  {
-    "garageId": "000703",
-    "address": "Avenida Martins, 357",
-    "filial": "Filial Empresarial",
-    "totalSpots": 82,
-    "occupiedSpots": 30,
-    "availableSpots": 52,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000703"
-  },
-  {
-    "garageId": "000704",
-    "address": "Marginal Gabriel, 75965",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 610,
-    "occupiedSpots": 544,
-    "availableSpots": 66,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000704"
-  },
-  {
-    "garageId": "000705",
-    "address": "Rodovia Oliveira, 325",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 650,
-    "occupiedSpots": 339,
-    "availableSpots": 311,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000705"
-  },
-  {
-    "garageId": "000706",
-    "address": "Marginal Pedro Henrique, 598",
-    "filial": "Filial Jardins",
-    "totalSpots": 406,
-    "occupiedSpots": 243,
-    "availableSpots": 163,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000706"
-  },
-  {
-    "garageId": "000707",
-    "address": "Travessa Silva, 207",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 592,
-    "occupiedSpots": 571,
-    "availableSpots": 21,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000707"
-  },
-  {
-    "garageId": "000708",
-    "address": "Rua Oliveira, 99909",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 622,
-    "occupiedSpots": 599,
-    "availableSpots": 23,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000708"
-  },
-  {
-    "garageId": "000709",
-    "address": "Alameda Yago, 13124",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 463,
-    "occupiedSpots": 368,
-    "availableSpots": 95,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000709"
-  },
-  {
-    "garageId": "000710",
-    "address": "Rodovia Moraes, 282",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 121,
-    "occupiedSpots": 108,
-    "availableSpots": 13,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000710"
-  },
-  {
-    "garageId": "000711",
-    "address": "Marginal Braga, 533",
-    "filial": "Filial Shopping",
-    "totalSpots": 287,
-    "occupiedSpots": 208,
-    "availableSpots": 79,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000711"
-  },
-  {
-    "garageId": "000712",
-    "address": "Rodovia Silas, 12420",
-    "filial": "Filial Empresarial",
-    "totalSpots": 603,
-    "occupiedSpots": 317,
-    "availableSpots": 286,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000712"
-  },
-  {
-    "garageId": "000713",
-    "address": "Marginal Souza, 492",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 468,
-    "occupiedSpots": 230,
-    "availableSpots": 238,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000713"
-  },
-  {
-    "garageId": "000714",
-    "address": "Rodovia Pereira, 626",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 99,
-    "occupiedSpots": 50,
-    "availableSpots": 49,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000714"
-  },
-  {
-    "garageId": "000715",
-    "address": "Rodovia Carvalho, 67628",
-    "filial": "Filial Aeroporto",
-    "totalSpots": 408,
-    "occupiedSpots": 274,
-    "availableSpots": 134,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000715"
-  },
-  {
-    "garageId": "000716",
-    "address": "Travessa Reis, 4900",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 190,
-    "occupiedSpots": 165,
-    "availableSpots": 25,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000716"
-  },
-  {
-    "garageId": "000717",
-    "address": "Travessa Nogueira, 8471",
-    "filial": "Filial Jardins",
-    "totalSpots": 474,
-    "occupiedSpots": 302,
-    "availableSpots": 172,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000717"
-  },
-  {
-    "garageId": "000718",
-    "address": "Rua Antonella, 65501",
-    "filial": "Filial Empresarial",
-    "totalSpots": 550,
-    "occupiedSpots": 402,
-    "availableSpots": 148,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000718"
-  },
-  {
-    "garageId": "000719",
-    "address": "Marginal Braga, 411",
-    "filial": "Filial Savassi",
-    "totalSpots": 561,
-    "occupiedSpots": 211,
-    "availableSpots": 350,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000719"
-  },
-  {
-    "garageId": "000720",
-    "address": "Travessa Meire, 937",
-    "filial": "Filial Setor Oeste",
-    "totalSpots": 483,
-    "occupiedSpots": 384,
-    "availableSpots": 99,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000720"
-  },
-  {
-    "garageId": "000721",
-    "address": "Alameda Mariana, 199",
-    "filial": "Filial Centro",
-    "totalSpots": 401,
-    "occupiedSpots": 172,
-    "availableSpots": 229,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000721"
-  },
-  {
-    "garageId": "000722",
-    "address": "Avenida Joaquim, 610",
-    "filial": "Filial Rodoviária",
-    "totalSpots": 439,
-    "occupiedSpots": 394,
-    "availableSpots": 45,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000722"
-  },
-  {
-    "garageId": "000723",
-    "address": "Travessa Saraiva, 2032",
-    "filial": "Filial Empresarial",
-    "totalSpots": 328,
-    "occupiedSpots": 298,
-    "availableSpots": 30,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000723"
-  },
-  {
-    "garageId": "000724",
-    "address": "Rua Breno, 58084",
-    "filial": "Filial Empresarial",
-    "totalSpots": 112,
-    "occupiedSpots": 46,
-    "availableSpots": 66,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000724"
-  },
-  {
-    "garageId": "000725",
-    "address": "Travessa Davi, 738",
-    "filial": "Filial Paulista",
-    "totalSpots": 182,
-    "occupiedSpots": 143,
-    "availableSpots": 39,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000725"
-  },
-  {
-    "garageId": "000726",
-    "address": "Avenida Antônio, 90206",
-    "filial": "Filial Empresarial",
-    "totalSpots": 646,
-    "occupiedSpots": 432,
-    "availableSpots": 214,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000726"
-  },
-  {
-    "garageId": "000727",
-    "address": "Avenida Liz, 39563",
-    "filial": "Filial Savassi",
-    "totalSpots": 615,
-    "occupiedSpots": 578,
-    "availableSpots": 37,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000727"
-  },
-  {
-    "garageId": "000728",
-    "address": "Travessa Saraiva, 545",
-    "filial": "Filial Empresarial",
-    "totalSpots": 133,
-    "occupiedSpots": 76,
-    "availableSpots": 57,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000728"
-  },
-  {
-    "garageId": "000729",
-    "address": "Marginal Carvalho, 1924",
-    "filial": "Filial Paulista",
-    "totalSpots": 334,
-    "occupiedSpots": 178,
-    "availableSpots": 156,
-    "qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000729"
-  }
+	{
+		"garageId": "000610",
+		"address": "Marginal Margarida, 682",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 411,
+		"occupiedSpots": 162,
+		"availableSpots": 249,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000610"
+	},
+	{
+		"garageId": "000611",
+		"address": "Avenida Maria Eduarda, 1116",
+		"filial": "Filial Empresarial",
+		"totalSpots": 450,
+		"occupiedSpots": 334,
+		"availableSpots": 116,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000611"
+	},
+	{
+		"garageId": "000612",
+		"address": "Avenida Xavier, 5929",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 250,
+		"occupiedSpots": 195,
+		"availableSpots": 55,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000612"
+	},
+	{
+		"garageId": "000613",
+		"address": "Travessa Moreira, 7429",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 345,
+		"occupiedSpots": 124,
+		"availableSpots": 221,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000613"
+	},
+	{
+		"garageId": "000614",
+		"address": "Marginal Ricardo, 32345",
+		"filial": "Filial Paulista",
+		"totalSpots": 467,
+		"occupiedSpots": 325,
+		"availableSpots": 142,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000614"
+	},
+	{
+		"garageId": "000615",
+		"address": "Marginal Elísio, 855",
+		"filial": "Filial Centro",
+		"totalSpots": 347,
+		"occupiedSpots": 256,
+		"availableSpots": 91,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000615"
+	},
+	{
+		"garageId": "000616",
+		"address": "Marginal Víctor, 14079",
+		"filial": "Filial Jardins",
+		"totalSpots": 517,
+		"occupiedSpots": 434,
+		"availableSpots": 83,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000616"
+	},
+	{
+		"garageId": "000617",
+		"address": "Avenida Moreira, 89209",
+		"filial": "Filial Boa Viagem",
+		"totalSpots": 617,
+		"occupiedSpots": 576,
+		"availableSpots": 41,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000617"
+	},
+	{
+		"garageId": "000618",
+		"address": "Travessa Fábio, 885",
+		"filial": "Filial Boa Viagem",
+		"totalSpots": 560,
+		"occupiedSpots": 454,
+		"availableSpots": 106,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000618"
+	},
+	{
+		"garageId": "000619",
+		"address": "Rua Macedo, 4790",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 283,
+		"occupiedSpots": 170,
+		"availableSpots": 113,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000619"
+	},
+	{
+		"garageId": "000620",
+		"address": "Rua Maria Cecília, 71755",
+		"filial": "Filial Shopping",
+		"totalSpots": 276,
+		"occupiedSpots": 199,
+		"availableSpots": 77,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000620"
+	},
+	{
+		"garageId": "000621",
+		"address": "Marginal Albuquerque, 1537",
+		"filial": "Filial Paulista",
+		"totalSpots": 626,
+		"occupiedSpots": 437,
+		"availableSpots": 189,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000621"
+	},
+	{
+		"garageId": "000622",
+		"address": "Marginal Pereira, 15688",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 92,
+		"occupiedSpots": 59,
+		"availableSpots": 33,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000622"
+	},
+	{
+		"garageId": "000623",
+		"address": "Travessa Pedro, 7989",
+		"filial": "Filial Boa Viagem",
+		"totalSpots": 399,
+		"occupiedSpots": 247,
+		"availableSpots": 152,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000623"
+	},
+	{
+		"garageId": "000624",
+		"address": "Rua Caio, 972",
+		"filial": "Filial Savassi",
+		"totalSpots": 482,
+		"occupiedSpots": 420,
+		"availableSpots": 62,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000624"
+	},
+	{
+		"garageId": "000625",
+		"address": "Rodovia Reis, 6459",
+		"filial": "Filial Shopping",
+		"totalSpots": 232,
+		"occupiedSpots": 197,
+		"availableSpots": 35,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000625"
+	},
+	{
+		"garageId": "000626",
+		"address": "Travessa Moraes, 3518",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 274,
+		"occupiedSpots": 123,
+		"availableSpots": 151,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000626"
+	},
+	{
+		"garageId": "000627",
+		"address": "Avenida Warley, 2607",
+		"filial": "Filial Shopping",
+		"totalSpots": 469,
+		"occupiedSpots": 404,
+		"availableSpots": 65,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000627"
+	},
+	{
+		"garageId": "000628",
+		"address": "Avenida Benjamin, 849",
+		"filial": "Filial Empresarial",
+		"totalSpots": 80,
+		"occupiedSpots": 33,
+		"availableSpots": 47,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000628"
+	},
+	{
+		"garageId": "000629",
+		"address": "Travessa Nogueira, 15089",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 223,
+		"occupiedSpots": 84,
+		"availableSpots": 139,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000629"
+	},
+	{
+		"garageId": "000630",
+		"address": "Marginal Melo, 7537",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 451,
+		"occupiedSpots": 270,
+		"availableSpots": 181,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000630"
+	},
+	{
+		"garageId": "000631",
+		"address": "Avenida Braga, 75648",
+		"filial": "Filial Centro",
+		"totalSpots": 436,
+		"occupiedSpots": 340,
+		"availableSpots": 96,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000631"
+	},
+	{
+		"garageId": "000632",
+		"address": "Rodovia Batista, 9487",
+		"filial": "Filial Centro",
+		"totalSpots": 557,
+		"occupiedSpots": 385,
+		"availableSpots": 172,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000632"
+	},
+	{
+		"garageId": "000633",
+		"address": "Marginal Reis, 85678",
+		"filial": "Filial Paulista",
+		"totalSpots": 260,
+		"occupiedSpots": 212,
+		"availableSpots": 48,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000633"
+	},
+	{
+		"garageId": "000634",
+		"address": "Marginal Xavier, 86940",
+		"filial": "Filial Savassi",
+		"totalSpots": 178,
+		"occupiedSpots": 172,
+		"availableSpots": 6,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000634"
+	},
+	{
+		"garageId": "000635",
+		"address": "Alameda Costa, 861",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 531,
+		"occupiedSpots": 187,
+		"availableSpots": 344,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000635"
+	},
+	{
+		"garageId": "000636",
+		"address": "Rua Maria Helena, 9450",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 83,
+		"occupiedSpots": 60,
+		"availableSpots": 23,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000636"
+	},
+	{
+		"garageId": "000637",
+		"address": "Rua Fabiano, 1595",
+		"filial": "Filial Jardins",
+		"totalSpots": 533,
+		"occupiedSpots": 186,
+		"availableSpots": 347,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000637"
+	},
+	{
+		"garageId": "000638",
+		"address": "Marginal Júlio, 64471",
+		"filial": "Filial Jardins",
+		"totalSpots": 233,
+		"occupiedSpots": 118,
+		"availableSpots": 115,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000638"
+	},
+	{
+		"garageId": "000639",
+		"address": "Rua Gúbio, 68147",
+		"filial": "Filial Boa Viagem",
+		"totalSpots": 555,
+		"occupiedSpots": 410,
+		"availableSpots": 145,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000639"
+	},
+	{
+		"garageId": "000640",
+		"address": "Avenida Rebeca, 4033",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 565,
+		"occupiedSpots": 248,
+		"availableSpots": 317,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000640"
+	},
+	{
+		"garageId": "000641",
+		"address": "Alameda Valentina, 56598",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 474,
+		"occupiedSpots": 351,
+		"availableSpots": 123,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000641"
+	},
+	{
+		"garageId": "000642",
+		"address": "Rodovia Eduarda, 8793",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 273,
+		"occupiedSpots": 143,
+		"availableSpots": 130,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000642"
+	},
+	{
+		"garageId": "000643",
+		"address": "Rua Albuquerque, 26773",
+		"filial": "Filial Jardins",
+		"totalSpots": 252,
+		"occupiedSpots": 203,
+		"availableSpots": 49,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000643"
+	},
+	{
+		"garageId": "000644",
+		"address": "Travessa Kléber, 331",
+		"filial": "Filial Shopping",
+		"totalSpots": 188,
+		"occupiedSpots": 137,
+		"availableSpots": 51,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000644"
+	},
+	{
+		"garageId": "000645",
+		"address": "Avenida Santos, 5311",
+		"filial": "Filial Boa Viagem",
+		"totalSpots": 215,
+		"occupiedSpots": 77,
+		"availableSpots": 138,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000645"
+	},
+	{
+		"garageId": "000646",
+		"address": "Travessa Batista, 486",
+		"filial": "Filial Jardins",
+		"totalSpots": 396,
+		"occupiedSpots": 370,
+		"availableSpots": 26,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000646"
+	},
+	{
+		"garageId": "000647",
+		"address": "Rua Pedro Henrique, 8523",
+		"filial": "Filial Jardins",
+		"totalSpots": 412,
+		"occupiedSpots": 392,
+		"availableSpots": 20,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000647"
+	},
+	{
+		"garageId": "000648",
+		"address": "Marginal Guilherme, 61570",
+		"filial": "Filial Savassi",
+		"totalSpots": 513,
+		"occupiedSpots": 371,
+		"availableSpots": 142,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000648"
+	},
+	{
+		"garageId": "000649",
+		"address": "Travessa Kléber, 4688",
+		"filial": "Filial Centro",
+		"totalSpots": 440,
+		"occupiedSpots": 240,
+		"availableSpots": 200,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000649"
+	},
+	{
+		"garageId": "000650",
+		"address": "Rua Fabrício, 4212",
+		"filial": "Filial Paulista",
+		"totalSpots": 603,
+		"occupiedSpots": 583,
+		"availableSpots": 20,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000650"
+	},
+	{
+		"garageId": "000651",
+		"address": "Rodovia Braga, 2441",
+		"filial": "Filial Shopping",
+		"totalSpots": 115,
+		"occupiedSpots": 69,
+		"availableSpots": 46,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000651"
+	},
+	{
+		"garageId": "000652",
+		"address": "Rodovia Maria, 159",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 305,
+		"occupiedSpots": 275,
+		"availableSpots": 30,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000652"
+	},
+	{
+		"garageId": "000653",
+		"address": "Avenida Moreira, 50542",
+		"filial": "Filial Empresarial",
+		"totalSpots": 139,
+		"occupiedSpots": 71,
+		"availableSpots": 68,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000653"
+	},
+	{
+		"garageId": "000654",
+		"address": "Marginal Maitê, 550",
+		"filial": "Filial Centro",
+		"totalSpots": 519,
+		"occupiedSpots": 438,
+		"availableSpots": 81,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000654"
+	},
+	{
+		"garageId": "000655",
+		"address": "Avenida Macedo, 48845",
+		"filial": "Filial Centro",
+		"totalSpots": 560,
+		"occupiedSpots": 424,
+		"availableSpots": 136,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000655"
+	},
+	{
+		"garageId": "000656",
+		"address": "Rua Braga, 457",
+		"filial": "Filial Savassi",
+		"totalSpots": 562,
+		"occupiedSpots": 533,
+		"availableSpots": 29,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000656"
+	},
+	{
+		"garageId": "000657",
+		"address": "Travessa Sílvia, 33938",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 456,
+		"occupiedSpots": 392,
+		"availableSpots": 64,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000657"
+	},
+	{
+		"garageId": "000658",
+		"address": "Alameda Beatriz, 454",
+		"filial": "Filial Empresarial",
+		"totalSpots": 390,
+		"occupiedSpots": 273,
+		"availableSpots": 117,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000658"
+	},
+	{
+		"garageId": "000659",
+		"address": "Alameda Júlio, 82468",
+		"filial": "Filial Centro",
+		"totalSpots": 453,
+		"occupiedSpots": 407,
+		"availableSpots": 46,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000659"
+	},
+	{
+		"garageId": "000660",
+		"address": "Rodovia Martins, 3533",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 238,
+		"occupiedSpots": 157,
+		"availableSpots": 81,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000660"
+	},
+	{
+		"garageId": "000661",
+		"address": "Avenida Eloá, 52870",
+		"filial": "Filial Savassi",
+		"totalSpots": 468,
+		"occupiedSpots": 198,
+		"availableSpots": 270,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000661"
+	},
+	{
+		"garageId": "000662",
+		"address": "Travessa Vitor, 82247",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 321,
+		"occupiedSpots": 258,
+		"availableSpots": 63,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000662"
+	},
+	{
+		"garageId": "000663",
+		"address": "Alameda Ana Luiza, 85009",
+		"filial": "Filial Centro",
+		"totalSpots": 432,
+		"occupiedSpots": 156,
+		"availableSpots": 276,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000663"
+	},
+	{
+		"garageId": "000664",
+		"address": "Marginal Talita, 665",
+		"filial": "Filial Empresarial",
+		"totalSpots": 549,
+		"occupiedSpots": 345,
+		"availableSpots": 204,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000664"
+	},
+	{
+		"garageId": "000665",
+		"address": "Rua Lorena, 5580",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 608,
+		"occupiedSpots": 566,
+		"availableSpots": 42,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000665"
+	},
+	{
+		"garageId": "000666",
+		"address": "Travessa Sarah, 94776",
+		"filial": "Filial Shopping",
+		"totalSpots": 429,
+		"occupiedSpots": 181,
+		"availableSpots": 248,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000666"
+	},
+	{
+		"garageId": "000667",
+		"address": "Rua Braga, 62175",
+		"filial": "Filial Boa Viagem",
+		"totalSpots": 614,
+		"occupiedSpots": 510,
+		"availableSpots": 104,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000667"
+	},
+	{
+		"garageId": "000668",
+		"address": "Travessa Macedo, 2630",
+		"filial": "Filial Savassi",
+		"totalSpots": 404,
+		"occupiedSpots": 163,
+		"availableSpots": 241,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000668"
+	},
+	{
+		"garageId": "000669",
+		"address": "Marginal Lara, 981",
+		"filial": "Filial Shopping",
+		"totalSpots": 183,
+		"occupiedSpots": 129,
+		"availableSpots": 54,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000669"
+	},
+	{
+		"garageId": "000670",
+		"address": "Rua Enzo, 854",
+		"filial": "Filial Jardins",
+		"totalSpots": 315,
+		"occupiedSpots": 171,
+		"availableSpots": 144,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000670"
+	},
+	{
+		"garageId": "000671",
+		"address": "Marginal Tertuliano, 7571",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 456,
+		"occupiedSpots": 279,
+		"availableSpots": 177,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000671"
+	},
+	{
+		"garageId": "000672",
+		"address": "Marginal Macedo, 99037",
+		"filial": "Filial Jardins",
+		"totalSpots": 402,
+		"occupiedSpots": 269,
+		"availableSpots": 133,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000672"
+	},
+	{
+		"garageId": "000673",
+		"address": "Alameda Márcia, 960",
+		"filial": "Filial Shopping",
+		"totalSpots": 619,
+		"occupiedSpots": 426,
+		"availableSpots": 193,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000673"
+	},
+	{
+		"garageId": "000674",
+		"address": "Travessa Barros, 215",
+		"filial": "Filial Shopping",
+		"totalSpots": 633,
+		"occupiedSpots": 561,
+		"availableSpots": 72,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000674"
+	},
+	{
+		"garageId": "000675",
+		"address": "Rua Melo, 16667",
+		"filial": "Filial Jardins",
+		"totalSpots": 545,
+		"occupiedSpots": 326,
+		"availableSpots": 219,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000675"
+	},
+	{
+		"garageId": "000676",
+		"address": "Marginal Moreira, 25040",
+		"filial": "Filial Shopping",
+		"totalSpots": 158,
+		"occupiedSpots": 80,
+		"availableSpots": 78,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000676"
+	},
+	{
+		"garageId": "000677",
+		"address": "Avenida Natália, 13210",
+		"filial": "Filial Savassi",
+		"totalSpots": 249,
+		"occupiedSpots": 121,
+		"availableSpots": 128,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000677"
+	},
+	{
+		"garageId": "000678",
+		"address": "Avenida Macedo, 1016",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 351,
+		"occupiedSpots": 148,
+		"availableSpots": 203,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000678"
+	},
+	{
+		"garageId": "000679",
+		"address": "Travessa Saraiva, 4725",
+		"filial": "Filial Empresarial",
+		"totalSpots": 143,
+		"occupiedSpots": 100,
+		"availableSpots": 43,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000679"
+	},
+	{
+		"garageId": "000680",
+		"address": "Rua Clara, 263",
+		"filial": "Filial Savassi",
+		"totalSpots": 599,
+		"occupiedSpots": 473,
+		"availableSpots": 126,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000680"
+	},
+	{
+		"garageId": "000681",
+		"address": "Rua Vitor, 8294",
+		"filial": "Filial Boa Viagem",
+		"totalSpots": 292,
+		"occupiedSpots": 134,
+		"availableSpots": 158,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000681"
+	},
+	{
+		"garageId": "000682",
+		"address": "Avenida Dalila, 19720",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 632,
+		"occupiedSpots": 531,
+		"availableSpots": 101,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000682"
+	},
+	{
+		"garageId": "000683",
+		"address": "Marginal Elisa, 804",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 208,
+		"occupiedSpots": 112,
+		"availableSpots": 96,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000683"
+	},
+	{
+		"garageId": "000684",
+		"address": "Alameda Lucca, 4152",
+		"filial": "Filial Paulista",
+		"totalSpots": 307,
+		"occupiedSpots": 220,
+		"availableSpots": 87,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000684"
+	},
+	{
+		"garageId": "000685",
+		"address": "Alameda Sarah, 4169",
+		"filial": "Filial Centro",
+		"totalSpots": 255,
+		"occupiedSpots": 239,
+		"availableSpots": 16,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000685"
+	},
+	{
+		"garageId": "000686",
+		"address": "Rodovia Núbia, 375",
+		"filial": "Filial Empresarial",
+		"totalSpots": 457,
+		"occupiedSpots": 396,
+		"availableSpots": 61,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000686"
+	},
+	{
+		"garageId": "000687",
+		"address": "Marginal Arthur, 1811",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 83,
+		"occupiedSpots": 41,
+		"availableSpots": 42,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000687"
+	},
+	{
+		"garageId": "000688",
+		"address": "Rua Xavier, 899",
+		"filial": "Filial Jardins",
+		"totalSpots": 463,
+		"occupiedSpots": 423,
+		"availableSpots": 40,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000688"
+	},
+	{
+		"garageId": "000689",
+		"address": "Rua Moraes, 494",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 450,
+		"occupiedSpots": 333,
+		"availableSpots": 117,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000689"
+	},
+	{
+		"garageId": "000690",
+		"address": "Avenida Yasmin, 724",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 413,
+		"occupiedSpots": 232,
+		"availableSpots": 181,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000690"
+	},
+	{
+		"garageId": "000691",
+		"address": "Travessa Xavier, 79734",
+		"filial": "Filial Paulista",
+		"totalSpots": 113,
+		"occupiedSpots": 104,
+		"availableSpots": 9,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000691"
+	},
+	{
+		"garageId": "000692",
+		"address": "Travessa Melo, 4957",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 250,
+		"occupiedSpots": 236,
+		"availableSpots": 14,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000692"
+	},
+	{
+		"garageId": "000693",
+		"address": "Rodovia Enzo Gabriel, 911",
+		"filial": "Filial Centro",
+		"totalSpots": 188,
+		"occupiedSpots": 179,
+		"availableSpots": 9,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000693"
+	},
+	{
+		"garageId": "000694",
+		"address": "Rodovia Giovanna, 808",
+		"filial": "Filial Jardins",
+		"totalSpots": 140,
+		"occupiedSpots": 71,
+		"availableSpots": 69,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000694"
+	},
+	{
+		"garageId": "000695",
+		"address": "Marginal Xavier, 37330",
+		"filial": "Filial Centro",
+		"totalSpots": 499,
+		"occupiedSpots": 258,
+		"availableSpots": 241,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000695"
+	},
+	{
+		"garageId": "000696",
+		"address": "Travessa Heitor, 11699",
+		"filial": "Filial Savassi",
+		"totalSpots": 405,
+		"occupiedSpots": 285,
+		"availableSpots": 120,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000696"
+	},
+	{
+		"garageId": "000697",
+		"address": "Rua Lavínia, 24474",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 90,
+		"occupiedSpots": 87,
+		"availableSpots": 3,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000697"
+	},
+	{
+		"garageId": "000698",
+		"address": "Travessa Miguel, 71624",
+		"filial": "Filial Savassi",
+		"totalSpots": 188,
+		"occupiedSpots": 143,
+		"availableSpots": 45,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000698"
+	},
+	{
+		"garageId": "000699",
+		"address": "Rodovia Júlio, 77823",
+		"filial": "Filial Jardins",
+		"totalSpots": 643,
+		"occupiedSpots": 591,
+		"availableSpots": 52,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000699"
+	},
+	{
+		"garageId": "000700",
+		"address": "Avenida Salvador, 6588",
+		"filial": "Filial Boa Viagem",
+		"totalSpots": 559,
+		"occupiedSpots": 399,
+		"availableSpots": 160,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000700"
+	},
+	{
+		"garageId": "000701",
+		"address": "Alameda Ana Clara, 7845",
+		"filial": "Filial Jardins",
+		"totalSpots": 110,
+		"occupiedSpots": 39,
+		"availableSpots": 71,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000701"
+	},
+	{
+		"garageId": "000702",
+		"address": "Alameda Oliveira, 6137",
+		"filial": "Filial Centro",
+		"totalSpots": 593,
+		"occupiedSpots": 523,
+		"availableSpots": 70,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000702"
+	},
+	{
+		"garageId": "000703",
+		"address": "Avenida Martins, 357",
+		"filial": "Filial Empresarial",
+		"totalSpots": 82,
+		"occupiedSpots": 30,
+		"availableSpots": 52,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000703"
+	},
+	{
+		"garageId": "000704",
+		"address": "Marginal Gabriel, 75965",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 610,
+		"occupiedSpots": 544,
+		"availableSpots": 66,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000704"
+	},
+	{
+		"garageId": "000705",
+		"address": "Rodovia Oliveira, 325",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 650,
+		"occupiedSpots": 339,
+		"availableSpots": 311,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000705"
+	},
+	{
+		"garageId": "000706",
+		"address": "Marginal Pedro Henrique, 598",
+		"filial": "Filial Jardins",
+		"totalSpots": 406,
+		"occupiedSpots": 243,
+		"availableSpots": 163,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000706"
+	},
+	{
+		"garageId": "000707",
+		"address": "Travessa Silva, 207",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 592,
+		"occupiedSpots": 571,
+		"availableSpots": 21,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000707"
+	},
+	{
+		"garageId": "000708",
+		"address": "Rua Oliveira, 99909",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 622,
+		"occupiedSpots": 599,
+		"availableSpots": 23,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000708"
+	},
+	{
+		"garageId": "000709",
+		"address": "Alameda Yago, 13124",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 463,
+		"occupiedSpots": 368,
+		"availableSpots": 95,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000709"
+	},
+	{
+		"garageId": "000710",
+		"address": "Rodovia Moraes, 282",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 121,
+		"occupiedSpots": 108,
+		"availableSpots": 13,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000710"
+	},
+	{
+		"garageId": "000711",
+		"address": "Marginal Braga, 533",
+		"filial": "Filial Shopping",
+		"totalSpots": 287,
+		"occupiedSpots": 208,
+		"availableSpots": 79,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000711"
+	},
+	{
+		"garageId": "000712",
+		"address": "Rodovia Silas, 12420",
+		"filial": "Filial Empresarial",
+		"totalSpots": 603,
+		"occupiedSpots": 317,
+		"availableSpots": 286,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000712"
+	},
+	{
+		"garageId": "000713",
+		"address": "Marginal Souza, 492",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 468,
+		"occupiedSpots": 230,
+		"availableSpots": 238,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000713"
+	},
+	{
+		"garageId": "000714",
+		"address": "Rodovia Pereira, 626",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 99,
+		"occupiedSpots": 50,
+		"availableSpots": 49,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000714"
+	},
+	{
+		"garageId": "000715",
+		"address": "Rodovia Carvalho, 67628",
+		"filial": "Filial Aeroporto",
+		"totalSpots": 408,
+		"occupiedSpots": 274,
+		"availableSpots": 134,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000715"
+	},
+	{
+		"garageId": "000716",
+		"address": "Travessa Reis, 4900",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 190,
+		"occupiedSpots": 165,
+		"availableSpots": 25,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000716"
+	},
+	{
+		"garageId": "000717",
+		"address": "Travessa Nogueira, 8471",
+		"filial": "Filial Jardins",
+		"totalSpots": 474,
+		"occupiedSpots": 302,
+		"availableSpots": 172,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000717"
+	},
+	{
+		"garageId": "000718",
+		"address": "Rua Antonella, 65501",
+		"filial": "Filial Empresarial",
+		"totalSpots": 550,
+		"occupiedSpots": 402,
+		"availableSpots": 148,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000718"
+	},
+	{
+		"garageId": "000719",
+		"address": "Marginal Braga, 411",
+		"filial": "Filial Savassi",
+		"totalSpots": 561,
+		"occupiedSpots": 211,
+		"availableSpots": 350,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000719"
+	},
+	{
+		"garageId": "000720",
+		"address": "Travessa Meire, 937",
+		"filial": "Filial Setor Oeste",
+		"totalSpots": 483,
+		"occupiedSpots": 384,
+		"availableSpots": 99,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000720"
+	},
+	{
+		"garageId": "000721",
+		"address": "Alameda Mariana, 199",
+		"filial": "Filial Centro",
+		"totalSpots": 401,
+		"occupiedSpots": 172,
+		"availableSpots": 229,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000721"
+	},
+	{
+		"garageId": "000722",
+		"address": "Avenida Joaquim, 610",
+		"filial": "Filial Rodoviária",
+		"totalSpots": 439,
+		"occupiedSpots": 394,
+		"availableSpots": 45,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000722"
+	},
+	{
+		"garageId": "000723",
+		"address": "Travessa Saraiva, 2032",
+		"filial": "Filial Empresarial",
+		"totalSpots": 328,
+		"occupiedSpots": 298,
+		"availableSpots": 30,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000723"
+	},
+	{
+		"garageId": "000724",
+		"address": "Rua Breno, 58084",
+		"filial": "Filial Empresarial",
+		"totalSpots": 112,
+		"occupiedSpots": 46,
+		"availableSpots": 66,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000724"
+	},
+	{
+		"garageId": "000725",
+		"address": "Travessa Davi, 738",
+		"filial": "Filial Paulista",
+		"totalSpots": 182,
+		"occupiedSpots": 143,
+		"availableSpots": 39,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000725"
+	},
+	{
+		"garageId": "000726",
+		"address": "Avenida Antônio, 90206",
+		"filial": "Filial Empresarial",
+		"totalSpots": 646,
+		"occupiedSpots": 432,
+		"availableSpots": 214,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000726"
+	},
+	{
+		"garageId": "000727",
+		"address": "Avenida Liz, 39563",
+		"filial": "Filial Savassi",
+		"totalSpots": 615,
+		"occupiedSpots": 578,
+		"availableSpots": 37,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000727"
+	},
+	{
+		"garageId": "000728",
+		"address": "Travessa Saraiva, 545",
+		"filial": "Filial Empresarial",
+		"totalSpots": 133,
+		"occupiedSpots": 76,
+		"availableSpots": 57,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000728"
+	},
+	{
+		"garageId": "000729",
+		"address": "Marginal Carvalho, 1924",
+		"filial": "Filial Paulista",
+		"totalSpots": 334,
+		"occupiedSpots": 178,
+		"availableSpots": 156,
+		"qrCode": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=garage-000729"
+	}
 ]
