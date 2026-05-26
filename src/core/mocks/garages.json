@@ -1,0 +1,842 @@
+[
+  {
+    "id": "000610",
+    "name": "Garagem Oeste",
+    "address": "Marginal Margarida, 682",
+    "city": "Belo Horizonte/MG",
+    "regional": "SPL"
+  },
+  {
+    "id": "000611",
+    "name": "Pátio Alameda",
+    "address": "Avenida Maria Eduarda, 1116",
+    "city": "Recife/PE",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000612",
+    "name": "Pátio Boulevard",
+    "address": "Avenida Xavier, 5929",
+    "city": "Uberlândia/MG",
+    "regional": "mG"
+  },
+  {
+    "id": "000613",
+    "name": "Pátio Central",
+    "address": "Travessa Moreira, 7429",
+    "city": "Goiânia/GO",
+    "regional": "SP1"
+  },
+  {
+    "id": "000614",
+    "name": "Pátio Plaza",
+    "address": "Marginal Ricardo, 32345",
+    "city": "Campinas/SP",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000615",
+    "name": "Garagem Leste",
+    "address": "Marginal Elísio, 855",
+    "city": "João Pessoa/PB",
+    "regional": "Ne"
+  },
+  {
+    "id": "000616",
+    "name": "Centro de Vagas Prime",
+    "address": "Marginal Víctor, 14079",
+    "city": "Salvador/BA",
+    "regional": "Ne"
+  },
+  {
+    "id": "000617",
+    "name": "Parque de Estacionamento Alameda",
+    "address": "Avenida Moreira, 89209",
+    "city": "Recife/PE",
+    "regional": "mG"
+  },
+  {
+    "id": "000618",
+    "name": "Pátio Business",
+    "address": "Travessa Fábio, 885",
+    "city": "São Paulo/SP",
+    "regional": "SP1"
+  },
+  {
+    "id": "000619",
+    "name": "Garagem Central",
+    "address": "Rua Macedo, 4790",
+    "city": "Fortaleza/CE",
+    "regional": "Ne"
+  },
+  {
+    "id": "000620",
+    "name": "Estacionamento Plaza",
+    "address": "Rua Maria Cecília, 71755",
+    "city": "Salvador/BA",
+    "regional": "Ne"
+  },
+  {
+    "id": "000621",
+    "name": "Garagem Central",
+    "address": "Marginal Albuquerque, 1537",
+    "city": "Fortaleza/CE",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000622",
+    "name": "Pátio Corporate",
+    "address": "Marginal Pereira, 15688",
+    "city": "Fortaleza/CE",
+    "regional": "SPL"
+  },
+  {
+    "id": "000623",
+    "name": "Garagem Prime",
+    "address": "Travessa Pedro, 7989",
+    "city": "João Pessoa/PB",
+    "regional": "SP1"
+  },
+  {
+    "id": "000624",
+    "name": "Parque de Estacionamento Boulevard",
+    "address": "Rua Caio, 972",
+    "city": "Goiânia/GO",
+    "regional": "Ne"
+  },
+  {
+    "id": "000625",
+    "name": "Garagem Alameda",
+    "address": "Rodovia Reis, 6459",
+    "city": "Belo Horizonte/MG",
+    "regional": "SPL"
+  },
+  {
+    "id": "000626",
+    "name": "Garagem Comercial",
+    "address": "Travessa Moraes, 3518",
+    "city": "Uberlândia/MG",
+    "regional": "mG"
+  },
+  {
+    "id": "000627",
+    "name": "Pátio Executivo",
+    "address": "Avenida Warley, 2607",
+    "city": "Belo Horizonte/MG",
+    "regional": "mG"
+  },
+  {
+    "id": "000628",
+    "name": "Garagem Alameda",
+    "address": "Avenida Benjamin, 849",
+    "city": "Campinas/SP",
+    "regional": "SP1"
+  },
+  {
+    "id": "000629",
+    "name": "Pátio Leste",
+    "address": "Travessa Nogueira, 15089",
+    "city": "Fortaleza/CE",
+    "regional": "SP1"
+  },
+  {
+    "id": "000630",
+    "name": "Centro de Vagas Plaza",
+    "address": "Marginal Melo, 7537",
+    "city": "Campinas/SP",
+    "regional": "SP1"
+  },
+  {
+    "id": "000631",
+    "name": "Pátio Central",
+    "address": "Avenida Braga, 75648",
+    "city": "João Pessoa/PB",
+    "regional": "SPL"
+  },
+  {
+    "id": "000632",
+    "name": "Pátio Comercial",
+    "address": "Rodovia Batista, 9487",
+    "city": "Campinas/SP",
+    "regional": "Ne"
+  },
+  {
+    "id": "000633",
+    "name": "Centro de Vagas Plaza",
+    "address": "Marginal Reis, 85678",
+    "city": "São Paulo/SP",
+    "regional": "SPL"
+  },
+  {
+    "id": "000634",
+    "name": "Parque de Estacionamento Prime",
+    "address": "Marginal Xavier, 86940",
+    "city": "Goiânia/GO",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000635",
+    "name": "Estacionamento Sul",
+    "address": "Alameda Costa, 861",
+    "city": "Recife/PE",
+    "regional": "mG"
+  },
+  {
+    "id": "000636",
+    "name": "Estacionamento Boulevard",
+    "address": "Rua Maria Helena, 9450",
+    "city": "Salvador/BA",
+    "regional": "SPL"
+  },
+  {
+    "id": "000637",
+    "name": "Centro de Vagas Oeste",
+    "address": "Rua Fabiano, 1595",
+    "city": "Campinas/SP",
+    "regional": "SPL"
+  },
+  {
+    "id": "000638",
+    "name": "Estacionamento Prime",
+    "address": "Marginal Júlio, 64471",
+    "city": "Uberlândia/MG",
+    "regional": "Ne"
+  },
+  {
+    "id": "000639",
+    "name": "Garagem Boulevard",
+    "address": "Rua Gúbio, 68147",
+    "city": "São Paulo/SP",
+    "regional": "Ne"
+  },
+  {
+    "id": "000640",
+    "name": "Parque de Estacionamento Alameda",
+    "address": "Avenida Rebeca, 4033",
+    "city": "Uberlândia/MG",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000641",
+    "name": "Pátio Sul",
+    "address": "Alameda Valentina, 56598",
+    "city": "Fortaleza/CE",
+    "regional": "mG"
+  },
+  {
+    "id": "000642",
+    "name": "Estacionamento Business",
+    "address": "Rodovia Eduarda, 8793",
+    "city": "São Paulo/SP",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000643",
+    "name": "Parque de Estacionamento Leste",
+    "address": "Rua Albuquerque, 26773",
+    "city": "São Paulo/SP",
+    "regional": "SP1"
+  },
+  {
+    "id": "000644",
+    "name": "Pátio Corporate",
+    "address": "Travessa Kléber, 331",
+    "city": "Campinas/SP",
+    "regional": "SP1"
+  },
+  {
+    "id": "000645",
+    "name": "Parque de Estacionamento Business",
+    "address": "Avenida Santos, 5311",
+    "city": "Salvador/BA",
+    "regional": "mG"
+  },
+  {
+    "id": "000646",
+    "name": "Centro de Vagas Corporate",
+    "address": "Travessa Batista, 486",
+    "city": "São Paulo/SP",
+    "regional": "mG"
+  },
+  {
+    "id": "000647",
+    "name": "Centro de Vagas Oeste",
+    "address": "Rua Pedro Henrique, 8523",
+    "city": "Salvador/BA",
+    "regional": "Ne"
+  },
+  {
+    "id": "000648",
+    "name": "Centro de Vagas Leste",
+    "address": "Marginal Guilherme, 61570",
+    "city": "Goiânia/GO",
+    "regional": "mG"
+  },
+  {
+    "id": "000649",
+    "name": "Garagem Leste",
+    "address": "Travessa Kléber, 4688",
+    "city": "Uberlândia/MG",
+    "regional": "SPL"
+  },
+  {
+    "id": "000650",
+    "name": "Pátio Norte",
+    "address": "Rua Fabrício, 4212",
+    "city": "Natal/RN",
+    "regional": "SPL"
+  },
+  {
+    "id": "000651",
+    "name": "Parque de Estacionamento Executivo",
+    "address": "Rodovia Braga, 2441",
+    "city": "Salvador/BA",
+    "regional": "SPL"
+  },
+  {
+    "id": "000652",
+    "name": "Estacionamento Sul",
+    "address": "Rodovia Maria, 159",
+    "city": "Uberlândia/MG",
+    "regional": "Ne"
+  },
+  {
+    "id": "000653",
+    "name": "Parque de Estacionamento Central",
+    "address": "Avenida Moreira, 50542",
+    "city": "Recife/PE",
+    "regional": "SP1"
+  },
+  {
+    "id": "000654",
+    "name": "Parque de Estacionamento Norte",
+    "address": "Marginal Maitê, 550",
+    "city": "João Pessoa/PB",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000655",
+    "name": "Parque de Estacionamento Boulevard",
+    "address": "Avenida Macedo, 48845",
+    "city": "Recife/PE",
+    "regional": "Ne"
+  },
+  {
+    "id": "000656",
+    "name": "Garagem Comercial",
+    "address": "Rua Braga, 457",
+    "city": "São Paulo/SP",
+    "regional": "mG"
+  },
+  {
+    "id": "000657",
+    "name": "Garagem Alameda",
+    "address": "Travessa Sílvia, 33938",
+    "city": "Belo Horizonte/MG",
+    "regional": "SPL"
+  },
+  {
+    "id": "000658",
+    "name": "Parque de Estacionamento Comercial",
+    "address": "Alameda Beatriz, 454",
+    "city": "Uberlândia/MG",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000659",
+    "name": "Centro de Vagas Plaza",
+    "address": "Alameda Júlio, 82468",
+    "city": "Recife/PE",
+    "regional": "mG"
+  },
+  {
+    "id": "000660",
+    "name": "Centro de Vagas Oeste",
+    "address": "Rodovia Martins, 3533",
+    "city": "Salvador/BA",
+    "regional": "SP1"
+  },
+  {
+    "id": "000661",
+    "name": "Parque de Estacionamento Norte",
+    "address": "Avenida Eloá, 52870",
+    "city": "Salvador/BA",
+    "regional": "SPL"
+  },
+  {
+    "id": "000662",
+    "name": "Pátio Business",
+    "address": "Travessa Vitor, 82247",
+    "city": "Campinas/SP",
+    "regional": "SPL"
+  },
+  {
+    "id": "000663",
+    "name": "Parque de Estacionamento Oeste",
+    "address": "Alameda Ana Luiza, 85009",
+    "city": "Salvador/BA",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000664",
+    "name": "Garagem Oeste",
+    "address": "Marginal Talita, 665",
+    "city": "Uberlândia/MG",
+    "regional": "Ne"
+  },
+  {
+    "id": "000665",
+    "name": "Parque de Estacionamento Plaza",
+    "address": "Rua Lorena, 5580",
+    "city": "Belo Horizonte/MG",
+    "regional": "SP1"
+  },
+  {
+    "id": "000666",
+    "name": "Centro de Vagas Executivo",
+    "address": "Travessa Sarah, 94776",
+    "city": "João Pessoa/PB",
+    "regional": "mG"
+  },
+  {
+    "id": "000667",
+    "name": "Pátio Boulevard",
+    "address": "Rua Braga, 62175",
+    "city": "Recife/PE",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000668",
+    "name": "Estacionamento Leste",
+    "address": "Travessa Macedo, 2630",
+    "city": "Natal/RN",
+    "regional": "mG"
+  },
+  {
+    "id": "000669",
+    "name": "Centro de Vagas Sul",
+    "address": "Marginal Lara, 981",
+    "city": "Campinas/SP",
+    "regional": "Ne"
+  },
+  {
+    "id": "000670",
+    "name": "Pátio Executivo",
+    "address": "Rua Enzo, 854",
+    "city": "Recife/PE",
+    "regional": "Ne"
+  },
+  {
+    "id": "000671",
+    "name": "Garagem Central",
+    "address": "Marginal Tertuliano, 7571",
+    "city": "Salvador/BA",
+    "regional": "mG"
+  },
+  {
+    "id": "000672",
+    "name": "Parque de Estacionamento Norte",
+    "address": "Marginal Macedo, 99037",
+    "city": "Uberlândia/MG",
+    "regional": "mG"
+  },
+  {
+    "id": "000673",
+    "name": "Estacionamento Comercial",
+    "address": "Alameda Márcia, 960",
+    "city": "Natal/RN",
+    "regional": "Ne"
+  },
+  {
+    "id": "000674",
+    "name": "Garagem Plaza",
+    "address": "Travessa Barros, 215",
+    "city": "Salvador/BA",
+    "regional": "SPL"
+  },
+  {
+    "id": "000675",
+    "name": "Estacionamento Prime",
+    "address": "Rua Melo, 16667",
+    "city": "Salvador/BA",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000676",
+    "name": "Pátio Prime",
+    "address": "Marginal Moreira, 25040",
+    "city": "Recife/PE",
+    "regional": "mG"
+  },
+  {
+    "id": "000677",
+    "name": "Pátio Plaza",
+    "address": "Avenida Natália, 13210",
+    "city": "Fortaleza/CE",
+    "regional": "mG"
+  },
+  {
+    "id": "000678",
+    "name": "Garagem Central",
+    "address": "Avenida Macedo, 1016",
+    "city": "Belo Horizonte/MG",
+    "regional": "SP1"
+  },
+  {
+    "id": "000679",
+    "name": "Estacionamento Boulevard",
+    "address": "Travessa Saraiva, 4725",
+    "city": "Fortaleza/CE",
+    "regional": "mG"
+  },
+  {
+    "id": "000680",
+    "name": "Garagem Oeste",
+    "address": "Rua Clara, 263",
+    "city": "Recife/PE",
+    "regional": "SPL"
+  },
+  {
+    "id": "000681",
+    "name": "Parque de Estacionamento Norte",
+    "address": "Rua Vitor, 8294",
+    "city": "Salvador/BA",
+    "regional": "mG"
+  },
+  {
+    "id": "000682",
+    "name": "Parque de Estacionamento Oeste",
+    "address": "Avenida Dalila, 19720",
+    "city": "São Paulo/SP",
+    "regional": "SP1"
+  },
+  {
+    "id": "000683",
+    "name": "Estacionamento Prime",
+    "address": "Marginal Elisa, 804",
+    "city": "João Pessoa/PB",
+    "regional": "mG"
+  },
+  {
+    "id": "000684",
+    "name": "Estacionamento Comercial",
+    "address": "Alameda Lucca, 4152",
+    "city": "Salvador/BA",
+    "regional": "Ne"
+  },
+  {
+    "id": "000685",
+    "name": "Estacionamento Prime",
+    "address": "Alameda Sarah, 4169",
+    "city": "Recife/PE",
+    "regional": "Ne"
+  },
+  {
+    "id": "000686",
+    "name": "Centro de Vagas Business",
+    "address": "Rodovia Núbia, 375",
+    "city": "Belo Horizonte/MG",
+    "regional": "mG"
+  },
+  {
+    "id": "000687",
+    "name": "Estacionamento Comercial",
+    "address": "Marginal Arthur, 1811",
+    "city": "Fortaleza/CE",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000688",
+    "name": "Estacionamento Prime",
+    "address": "Rua Xavier, 899",
+    "city": "Belo Horizonte/MG",
+    "regional": "Ne"
+  },
+  {
+    "id": "000689",
+    "name": "Garagem Oeste",
+    "address": "Rua Moraes, 494",
+    "city": "Uberlândia/MG",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000690",
+    "name": "Pátio Business",
+    "address": "Avenida Yasmin, 724",
+    "city": "Natal/RN",
+    "regional": "SP1"
+  },
+  {
+    "id": "000691",
+    "name": "Garagem Business",
+    "address": "Travessa Xavier, 79734",
+    "city": "Belo Horizonte/MG",
+    "regional": "SP1"
+  },
+  {
+    "id": "000692",
+    "name": "Centro de Vagas Corporate",
+    "address": "Travessa Melo, 4957",
+    "city": "São Paulo/SP",
+    "regional": "SPL"
+  },
+  {
+    "id": "000693",
+    "name": "Centro de Vagas Norte",
+    "address": "Rodovia Enzo Gabriel, 911",
+    "city": "Uberlândia/MG",
+    "regional": "mG"
+  },
+  {
+    "id": "000694",
+    "name": "Parque de Estacionamento Boulevard",
+    "address": "Rodovia Giovanna, 808",
+    "city": "Belo Horizonte/MG",
+    "regional": "SPL"
+  },
+  {
+    "id": "000695",
+    "name": "Pátio Sul",
+    "address": "Marginal Xavier, 37330",
+    "city": "Uberlândia/MG",
+    "regional": "mG"
+  },
+  {
+    "id": "000696",
+    "name": "Estacionamento Central",
+    "address": "Travessa Heitor, 11699",
+    "city": "Salvador/BA",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000697",
+    "name": "Centro de Vagas Oeste",
+    "address": "Rua Lavínia, 24474",
+    "city": "Campinas/SP",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000698",
+    "name": "Parque de Estacionamento Boulevard",
+    "address": "Travessa Miguel, 71624",
+    "city": "João Pessoa/PB",
+    "regional": "SP1"
+  },
+  {
+    "id": "000699",
+    "name": "Garagem Leste",
+    "address": "Rodovia Júlio, 77823",
+    "city": "Natal/RN",
+    "regional": "SP1"
+  },
+  {
+    "id": "000700",
+    "name": "Pátio Plaza",
+    "address": "Avenida Salvador, 6588",
+    "city": "Fortaleza/CE",
+    "regional": "Ne"
+  },
+  {
+    "id": "000701",
+    "name": "Pátio Corporate",
+    "address": "Alameda Ana Clara, 7845",
+    "city": "Recife/PE",
+    "regional": "mG"
+  },
+  {
+    "id": "000702",
+    "name": "Estacionamento Norte",
+    "address": "Alameda Oliveira, 6137",
+    "city": "Uberlândia/MG",
+    "regional": "SPL"
+  },
+  {
+    "id": "000703",
+    "name": "Pátio Executivo",
+    "address": "Avenida Martins, 357",
+    "city": "João Pessoa/PB",
+    "regional": "SPL"
+  },
+  {
+    "id": "000704",
+    "name": "Estacionamento Business",
+    "address": "Marginal Gabriel, 75965",
+    "city": "João Pessoa/PB",
+    "regional": "Ne"
+  },
+  {
+    "id": "000705",
+    "name": "Parque de Estacionamento Plaza",
+    "address": "Rodovia Oliveira, 325",
+    "city": "Salvador/BA",
+    "regional": "SP1"
+  },
+  {
+    "id": "000706",
+    "name": "Parque de Estacionamento Central",
+    "address": "Marginal Pedro Henrique, 598",
+    "city": "Uberlândia/MG",
+    "regional": "mG"
+  },
+  {
+    "id": "000707",
+    "name": "Centro de Vagas Comercial",
+    "address": "Travessa Silva, 207",
+    "city": "Natal/RN",
+    "regional": "Ne"
+  },
+  {
+    "id": "000708",
+    "name": "Garagem Sul",
+    "address": "Rua Oliveira, 99909",
+    "city": "João Pessoa/PB",
+    "regional": "SP1"
+  },
+  {
+    "id": "000709",
+    "name": "Estacionamento Plaza",
+    "address": "Alameda Yago, 13124",
+    "city": "Goiânia/GO",
+    "regional": "Ne"
+  },
+  {
+    "id": "000710",
+    "name": "Pátio Leste",
+    "address": "Rodovia Moraes, 282",
+    "city": "João Pessoa/PB",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000711",
+    "name": "Centro de Vagas Leste",
+    "address": "Marginal Braga, 533",
+    "city": "Natal/RN",
+    "regional": "SP1"
+  },
+  {
+    "id": "000712",
+    "name": "Garagem Central",
+    "address": "Rodovia Silas, 12420",
+    "city": "Uberlândia/MG",
+    "regional": "mG"
+  },
+  {
+    "id": "000713",
+    "name": "Estacionamento Prime",
+    "address": "Marginal Souza, 492",
+    "city": "Goiânia/GO",
+    "regional": "SP1"
+  },
+  {
+    "id": "000714",
+    "name": "Garagem Oeste",
+    "address": "Rodovia Pereira, 626",
+    "city": "São Paulo/SP",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000715",
+    "name": "Parque de Estacionamento Central",
+    "address": "Rodovia Carvalho, 67628",
+    "city": "Natal/RN",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000716",
+    "name": "Garagem Executivo",
+    "address": "Travessa Reis, 4900",
+    "city": "Belo Horizonte/MG",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000717",
+    "name": "Centro de Vagas Norte",
+    "address": "Travessa Nogueira, 8471",
+    "city": "Recife/PE",
+    "regional": "SPL"
+  },
+  {
+    "id": "000718",
+    "name": "Garagem Comercial",
+    "address": "Rua Antonella, 65501",
+    "city": "Salvador/BA",
+    "regional": "mG"
+  },
+  {
+    "id": "000719",
+    "name": "Parque de Estacionamento Sul",
+    "address": "Marginal Braga, 411",
+    "city": "Fortaleza/CE",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000720",
+    "name": "Pátio Corporate",
+    "address": "Travessa Meire, 937",
+    "city": "Uberlândia/MG",
+    "regional": "mG"
+  },
+  {
+    "id": "000721",
+    "name": "Centro de Vagas Corporate",
+    "address": "Alameda Mariana, 199",
+    "city": "Salvador/BA",
+    "regional": "mG"
+  },
+  {
+    "id": "000722",
+    "name": "Estacionamento Central",
+    "address": "Avenida Joaquim, 610",
+    "city": "São Paulo/SP",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000723",
+    "name": "Garagem Sul",
+    "address": "Travessa Saraiva, 2032",
+    "city": "Uberlândia/MG",
+    "regional": "Ne"
+  },
+  {
+    "id": "000724",
+    "name": "Garagem Alameda",
+    "address": "Rua Breno, 58084",
+    "city": "Salvador/BA",
+    "regional": "Franquias"
+  },
+  {
+    "id": "000725",
+    "name": "Centro de Vagas Business",
+    "address": "Travessa Davi, 738",
+    "city": "Belo Horizonte/MG",
+    "regional": "Ne"
+  },
+  {
+    "id": "000726",
+    "name": "Pátio Corporate",
+    "address": "Avenida Antônio, 90206",
+    "city": "Campinas/SP",
+    "regional": "mG"
+  },
+  {
+    "id": "000727",
+    "name": "Estacionamento Norte",
+    "address": "Avenida Liz, 39563",
+    "city": "São Paulo/SP",
+    "regional": "Ne"
+  },
+  {
+    "id": "000728",
+    "name": "Pátio Comercial",
+    "address": "Travessa Saraiva, 545",
+    "city": "Fortaleza/CE",
+    "regional": "Ne"
+  },
+  {
+    "id": "000729",
+    "name": "Pátio Norte",
+    "address": "Marginal Carvalho, 1924",
+    "city": "Natal/RN",
+    "regional": "mG"
+  }
+]

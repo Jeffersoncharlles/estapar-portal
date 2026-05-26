@@ -14,15 +14,18 @@
 	"dependencies": {
 		"@hookform/resolvers": "^5.4.0",
 		"@tailwindcss/vite": "^4.3.0",
+		"clsx": "^2.1.1",
 		"react": "^19.2.6",
 		"react-dom": "^19.2.6",
 		"react-hook-form": "^7.76.1",
 		"react-router": "^7.15.1",
+		"tailwind-merge": "^3.6.0",
 		"tailwindcss": "^4.3.0",
 		"zod": "^4.4.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.15",
+		"@faker-js/faker": "^10.4.0",
 		"@types/node": "^24.12.3",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
