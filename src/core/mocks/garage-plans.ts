@@ -26,10 +26,20 @@ const planDescriptions = [
 	"Plano Mensal Compacto",
 ]
 
-const vehicleTypes: VehicleType[] = ["Carro", "Moto", "SUV", "Utilitário", "Elétrico"]
+const vehicleTypes: VehicleType[] = [
+	"Carro",
+	"Moto",
+	"SUV",
+	"Utilitário",
+	"Elétrico",
+]
 
-const garagesWithoutPlans = new Set(garages.slice(0, 2).map((garage) => garage.id))
-const garagesWithSinglePlan = new Set(garages.slice(2, 4).map((garage) => garage.id))
+const garagesWithoutPlans = new Set(
+	garages.slice(0, 2).map((garage) => garage.id),
+)
+const garagesWithSinglePlan = new Set(
+	garages.slice(2, 4).map((garage) => garage.id),
+)
 
 const createPlanDates = () => {
 	const validityStart = faker.date.soon({ days: 45 })
@@ -50,7 +60,11 @@ export const garagePlans: GaragePlan[] = garages.flatMap((garage) => {
 
 	return Array.from({ length: planCount }, () => {
 		const price = faker.number.int({ min: 180, max: 1200 })
-		const cancellationFee = Number((price * faker.number.float({ min: 0.1, max: 0.4, fractionDigits: 2 })).toFixed(2))
+		const cancellationFee = Number(
+			(
+				price * faker.number.float({ min: 0.1, max: 0.4, fractionDigits: 2 })
+			).toFixed(2),
+		)
 		const dates = createPlanDates()
 
 		return {
