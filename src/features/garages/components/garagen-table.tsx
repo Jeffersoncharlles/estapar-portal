@@ -1,4 +1,3 @@
-import { NavLink, useLocation } from "react-router"
 import { ButtonSheet } from "@/components/ui/button-sheat"
 import type { Garage } from "@/core/mocks/garages"
 import { ModalPlans } from "@/features/plans/components/modal-plans"
@@ -8,7 +7,6 @@ interface GaragenTableProps {
 }
 
 export const GaragenTable = ({ items }: GaragenTableProps) => {
-	const location = useLocation()
 	return (
 		<div className="overflow-hidden rounded-md border border-muted-border bg-white">
 			<div className="overflow-x-auto">
@@ -40,14 +38,9 @@ export const GaragenTable = ({ items }: GaragenTableProps) => {
 									{garage.regional}
 								</td>
 								<td className="px-4 py-3 text-right">
-									<NavLink
-										to={`/plans/${garage.id}`}
-										state={{ backgroundLocation: location }}
-									>
-										<ButtonSheet>
-											<ModalPlans mode="sheet" />
-										</ButtonSheet>
-									</NavLink>
+									<ButtonSheet>
+										<ModalPlans mode="sheet" garageId={garage.id} />
+									</ButtonSheet>
 								</td>
 							</tr>
 						))}

@@ -24,6 +24,35 @@
 	--color-border: var(--border);
 	--color-input: var(--input);
 	--color-ring: var(--ring);
+	--color-sheet-tab-background: var(--sheet-tab-background);
+	--color-sheet-tab-selected: var(--sheet-tab-selected);
+	--color-sheet-sidebar-selected: var(--sheet-sidebar-selected);
+	--color-sheet-overlay: var(--sheet-overlay);
+	--color-sheet-panel-bg: var(--sheet-panel-bg);
+	--color-sheet-header-icon: var(--sheet-header-icon);
+	--color-sheet-header-code: var(--sheet-header-code);
+	--color-sheet-close-icon: var(--sheet-close-icon);
+	--color-sheet-close-hover-bg: var(--sheet-close-hover-bg);
+	--color-sheet-address-text: var(--sheet-address-text);
+	--color-sheet-sidebar-bg: var(--sheet-sidebar-bg);
+	--color-sheet-sidebar-border: var(--sheet-sidebar-border);
+	--color-sheet-sidebar-text: var(--sheet-sidebar-text);
+	--color-sheet-sidebar-active-text: var(--sheet-sidebar-active-text);
+	--color-sheet-stats-label: var(--sheet-stats-label);
+	--color-sheet-stats-icon: var(--sheet-stats-icon);
+	--color-sheet-stats-available-text: var(--sheet-stats-available-text);
+	--color-sheet-stats-available-icon: var(--sheet-stats-available-icon);
+	--color-sheet-qr: var(--sheet-qr);
+	--color-sheet-table-border: var(--sheet-table-border);
+	--color-sheet-table-text: var(--sheet-table-text);
+	--color-sheet-table-head-text: var(--sheet-table-head-text);
+	--color-sheet-table-row-border: var(--sheet-table-row-border);
+	--color-sheet-table-status-bg: var(--sheet-table-status-bg);
+	--color-sheet-table-action: var(--sheet-table-action);
+	--color-sheet-table-action-hover: var(--sheet-table-action-hover);
+	--color-sheet-cta-border: var(--sheet-cta-border);
+	--color-sheet-cta-bg: var(--sheet-cta-bg);
+	--color-sheet-cta-text: var(--sheet-cta-text);
 }
 
 :root {
@@ -47,6 +76,35 @@
 	--border: var(--muted-border);
 	--input: var(--muted-border);
 	--ring: #7ad33e;
+	--sheet-tab-background: #d9d9d9;
+	--sheet-tab-selected: #309365;
+	--sheet-sidebar-selected: #62a932;
+	--sheet-overlay: rgb(0 0 0 / 0.8);
+	--sheet-panel-bg: #f3f3f3;
+	--sheet-header-icon: #2a2a2a;
+	--sheet-header-code: #666666;
+	--sheet-close-icon: #5d5d5d;
+	--sheet-close-hover-bg: #ececec;
+	--sheet-address-text: #616161;
+	--sheet-sidebar-bg: #efefef;
+	--sheet-sidebar-border: #dfdfdf;
+	--sheet-sidebar-text: #636363;
+	--sheet-sidebar-active-text: #1f1f1f;
+	--sheet-stats-label: #7a7a7a;
+	--sheet-stats-icon: #999999;
+	--sheet-stats-available-text: #2f8f33;
+	--sheet-stats-available-icon: #4a9f4c;
+	--sheet-qr: #252525;
+	--sheet-table-border: #e0e0e0;
+	--sheet-table-text: #606060;
+	--sheet-table-head-text: #787878;
+	--sheet-table-row-border: #ececec;
+	--sheet-table-status-bg: #f4f4f4;
+	--sheet-table-action: #6c6c6c;
+	--sheet-table-action-hover: #3f3f3f;
+	--sheet-cta-border: #b8d8b8;
+	--sheet-cta-bg: #edf7ed;
+	--sheet-cta-text: #4f9f56;
 
 	/* radius aliases */
 	--radius-sm: 0.25rem;
@@ -75,6 +133,35 @@
 	--border: var(--muted-border);
 	--input: var(--muted-border);
 	--ring: #7ad33e;
+	--sheet-tab-background: #d9d9d9;
+	--sheet-tab-selected: #309365;
+	--sheet-sidebar-selected: #62a932;
+	--sheet-overlay: rgb(0 0 0 / 0.8);
+	--sheet-panel-bg: #f3f3f3;
+	--sheet-header-icon: #2a2a2a;
+	--sheet-header-code: #666666;
+	--sheet-close-icon: #5d5d5d;
+	--sheet-close-hover-bg: #ececec;
+	--sheet-address-text: #616161;
+	--sheet-sidebar-bg: #efefef;
+	--sheet-sidebar-border: #dfdfdf;
+	--sheet-sidebar-text: #636363;
+	--sheet-sidebar-active-text: #1f1f1f;
+	--sheet-stats-label: #7a7a7a;
+	--sheet-stats-icon: #999999;
+	--sheet-stats-available-text: #2f8f33;
+	--sheet-stats-available-icon: #4a9f4c;
+	--sheet-qr: #252525;
+	--sheet-table-border: #e0e0e0;
+	--sheet-table-text: #606060;
+	--sheet-table-head-text: #787878;
+	--sheet-table-row-border: #ececec;
+	--sheet-table-status-bg: #f4f4f4;
+	--sheet-table-action: #6c6c6c;
+	--sheet-table-action-hover: #3f3f3f;
+	--sheet-cta-border: #b8d8b8;
+	--sheet-cta-bg: #edf7ed;
+	--sheet-cta-text: #4f9f56;
 }
 
 * {

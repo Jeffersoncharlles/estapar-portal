@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router"
+
 import { ModalPlans } from "@/features/plans/components/modal-plans"
 import { AuthLayout } from "@/layouts/auth"
 import { DashboardLayout } from "@/layouts/dashboard"

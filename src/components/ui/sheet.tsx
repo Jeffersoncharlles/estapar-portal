@@ -35,7 +35,7 @@ function SheetOverlay({
 		<SheetPrimitive.Overlay
 			data-slot="sheet-overlay"
 			className={cn(
-				"fixed inset-0 z-50 bg-black/65 duration-100 supports-backdrop-filter:backdrop-blur-xs data-open:animate-in data-open:fade-in-0 data-closed:animate-out data-closed:fade-out-0",
+				"fixed inset-0 z-50 bg-sheet-overlay duration-100 supports-backdrop-filter:backdrop-blur-xs data-open:animate-in data-open:fade-in-0 data-closed:animate-out data-closed:fade-out-0",
 				className,
 			)}
 			{...props}
@@ -68,10 +68,13 @@ function SheetContent({
 				{children}
 				{showCloseButton && (
 					<SheetPrimitive.Close data-slot="sheet-close" asChild>
-						<Button className="absolute top-2 right-2 h-7 w-7 rounded-md">
-							<XIcon className="size-4" />
+						<button
+							type="button"
+							className="absolute cursor-pointer top-4 right-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
+						>
+							<XIcon className="size-8" />
 							<span className="sr-only">Close</span>
-						</Button>
+						</button>
 					</SheetPrimitive.Close>
 				)}
 			</SheetPrimitive.Content>
