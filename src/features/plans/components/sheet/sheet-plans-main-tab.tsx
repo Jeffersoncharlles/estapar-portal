@@ -1,4 +1,4 @@
-export const ModalPlansMainTab = () => {
+export const SheetPlansMainTab = () => {
 	return (
 		<section className="flex shrink-0 items-end rounded bg-sheet-tab-background px-2 pt-2">
 			<div
