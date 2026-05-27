@@ -1,18 +1,18 @@
 import { Check, FilePenLine } from "lucide-react"
 import type { GaragePlan } from "@/core/mocks/garage-plans"
 
-interface ModalPlansTableProps {
+interface SheetPlansTableProps {
 	plans: GaragePlan[]
 	formatCurrency: (value: number) => string
 }
 
-export const ModalPlansTable = ({
+export const SheetPlansTable = ({
 	plans,
 	formatCurrency,
-}: ModalPlansTableProps) => {
+}: SheetPlansTableProps) => {
 	return (
-		<div className="min-h-0 p-3 bg-card">
-			<div className="mb-3 flex items-center justify-between">
+		<div className="min-h-0 bg-card p-2 md:p-3">
+			<div className="mb-2 flex items-center justify-between md:mb-3">
 				<h3 className="text-sm font-semibold text-muted">Planos Disponiveis</h3>
 				<button
 					type="button"

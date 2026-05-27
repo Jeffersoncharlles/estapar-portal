@@ -1,6 +1,6 @@
 import { ButtonSheet } from "@/components/ui/button-sheat"
 import type { Garage } from "@/core/mocks/garages"
-import { ModalPlans } from "@/features/plans/components/modal-plans"
+import { SheetPlans } from "@/features/plans/components/sheet/sheet-plans"
 
 interface GaragenTableProps {
 	items: Garage[]
@@ -39,7 +39,7 @@ export const GaragenTable = ({ items }: GaragenTableProps) => {
 								</td>
 								<td className="px-4 py-3 text-right">
 									<ButtonSheet>
-										<ModalPlans mode="sheet" garageId={garage.id} />
+										<SheetPlans mode="sheet" garageId={garage.id} />
 									</ButtonSheet>
 								</td>
 							</tr>

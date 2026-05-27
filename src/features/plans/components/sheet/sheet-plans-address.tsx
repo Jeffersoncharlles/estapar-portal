@@ -1,16 +1,16 @@
 import { Building2, MapPin } from "lucide-react"
 
-interface ModalPlansAddressProps {
+interface SheetPlansAddressProps {
 	address: string
 	filial: string
 	regional: string
 }
 
-export const ModalPlansAddress = ({
+export const SheetPlansAddress = ({
 	address,
 	filial,
 	regional,
-}: ModalPlansAddressProps) => {
+}: SheetPlansAddressProps) => {
 	return (
 		<div className="space-y-2 text-base text-sheet-address-text">
 			<p className="flex items-center gap-1.5">

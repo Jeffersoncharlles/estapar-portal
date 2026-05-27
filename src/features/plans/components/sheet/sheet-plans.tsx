@@ -6,17 +6,17 @@ import { garageDetails } from "@/core/mocks/garage-details"
 import type { GaragePlan } from "@/core/mocks/garage-plans"
 import garagePlansMock from "@/core/mocks/garage-plans.json"
 import { garages } from "@/core/mocks/garages"
-import { ModalPlansAddress } from "@/features/plans/components/modal-plans-address"
-import { ModalPlansHeader } from "@/features/plans/components/modal-plans-header"
-import { ModalPlansMainTab } from "@/features/plans/components/modal-plans-main-tab"
+import { SheetPlansAddress } from "@/features/plans/components/sheet/sheet-plans-address"
+import { SheetPlansHeader } from "@/features/plans/components/sheet/sheet-plans-header"
+import { SheetPlansMainTab } from "@/features/plans/components/sheet/sheet-plans-main-tab"
 import {
-	type ModalPlansMenu,
-	ModalPlansSidebar,
-} from "@/features/plans/components/modal-plans-sidebar"
-import { ModalPlansStats } from "@/features/plans/components/modal-plans-stats"
-import { ModalPlansTable } from "@/features/plans/components/modal-plans-table"
+	type SheetPlansMenu,
+	SheetPlansSidebar,
+} from "@/features/plans/components/sheet/sheet-plans-sidebar"
+import { SheetPlansStats } from "@/features/plans/components/sheet/sheet-plans-stats"
+import { SheetPlansTable } from "@/features/plans/components/sheet/sheet-plans-table"
 
-interface ModalPlansProps {
+interface SheetPlansProps {
 	mode?: "page" | "sheet"
 	garageId?: string
 }
@@ -28,14 +28,14 @@ const formatCurrency = (value: number) => {
 	}).format(value)
 }
 
-const ModalPlansBody = ({
+const SheetPlansBody = ({
 	garageId,
 	isSheet,
 }: {
 	garageId?: string
 	isSheet: boolean
 }) => {
-	const [selectedMenu, setSelectedMenu] = useState<ModalPlansMenu>("planos")
+	const [selectedMenu, setSelectedMenu] = useState<SheetPlansMenu>("planos")
 
 	if (!garageId) {
 		redirect("/garagens")
@@ -72,46 +72,46 @@ const ModalPlansBody = ({
 
 	return (
 		<section className="flex h-full w-full flex-col rounded-md bg-card text-muted">
-			<ModalPlansHeader
+			<SheetPlansHeader
 				garageName={garageName}
 				garageCode={garageCode}
 				isSheet={isSheet}
 			/>
 
-			<section className="flex h-full flex-1 flex-col px-6 pb-6">
+			<section className="flex h-full min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-4 pb-4 md:gap-5 md:px-6 md:pb-6">
 				<div className="space-y-4">
-					<ModalPlansAddress
+					<SheetPlansAddress
 						address={address}
 						filial={filial}
 						regional={regional}
 					/>
-					<ModalPlansMainTab />
+					<SheetPlansMainTab />
 				</div>
 
-				<ModalPlansStats
+				<SheetPlansStats
 					totalSpots={totalSpots}
 					occupiedSpots={occupiedSpots}
 					availableSpots={availableSpots}
 				/>
 
-				<div className="relative mt-auto grid h-[40%] min-h-[220px] shrink-0 grid-cols-[120px_1fr] gap-3 bg-card pt-[1.5px]">
+				<div className="relative mt-auto shrink-0 bg-card pt-[1.5px] md:grid md:h-[40%] md:min-h-[220px] md:grid-cols-[120px_1fr] md:gap-3">
 					<Separator.Root
 						orientation="horizontal"
 						className="pointer-events-none absolute left-0 top-0 h-[1.5px] w-full bg-sidebar-border"
 						decorative
 					/>
-					<ModalPlansSidebar
+					<SheetPlansSidebar
 						selectedMenu={selectedMenu}
 						onSelectMenu={setSelectedMenu}
 					/>
-					<ModalPlansTable plans={plans} formatCurrency={formatCurrency} />
+					<SheetPlansTable plans={plans} formatCurrency={formatCurrency} />
 				</div>
 			</section>
 		</section>
 	)
 }
 
-export const ModalPlans = ({ mode = "page", garageId }: ModalPlansProps) => {
+export const SheetPlans = ({ mode = "page", garageId }: SheetPlansProps) => {
 	const { planId } = useParams()
 	const selectedGarageId = garageId ?? planId
 
@@ -120,16 +120,16 @@ export const ModalPlans = ({ mode = "page", garageId }: ModalPlansProps) => {
 			<SheetContent
 				side="right"
 				showCloseButton={false}
-				className="h-full w-[85vw] max-w-none border-l-0 bg-card p-0 data-[side=right]:w-[85vw] data-[side=right]:sm:max-w-none"
+				className="h-full w-full max-w-none border-l-0 bg-card p-0 data-[side=right]:w-full data-[side=right]:sm:w-[92vw] data-[side=right]:lg:w-[85vw] data-[side=right]:sm:max-w-none"
 			>
-				<ModalPlansBody garageId={selectedGarageId} isSheet />
+				<SheetPlansBody garageId={selectedGarageId} isSheet />
 			</SheetContent>
 		)
 	}
 
 	return (
 		<section className="flex min-h-[calc(100vh-8rem)] flex-col rounded-md bg-card p-3">
-			<ModalPlansBody garageId={selectedGarageId} isSheet={false} />
+			<SheetPlansBody garageId={selectedGarageId} isSheet={false} />
 		</section>
 	)
 }

@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router"
 
-import { ModalPlans } from "@/features/plans/components/modal-plans"
+import { SheetPlans } from "@/features/plans/components/sheet/sheet-plans"
 import { AuthLayout } from "@/layouts/auth"
 import { DashboardLayout } from "@/layouts/dashboard"
 import { GaragePage } from "@/pages/garage"
@@ -36,7 +36,7 @@ export const routes = createBrowserRouter([
 				children: [
 					{
 						path: ":planId",
-						element: <ModalPlans />,
+						element: <SheetPlans />,
 					},
 				],
 			},
