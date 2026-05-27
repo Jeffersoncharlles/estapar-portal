@@ -1,7 +1,5 @@
+import { HomeDashboard } from "@/features/home/components/home-dashboard"
+
 export const HomePage = () => {
-	return (
-		<div>
-			<h1>Home</h1>
-		</div>
-	)
+	return <HomeDashboard />
 }

@@ -1,6 +1,6 @@
 import { fakerPT_BR as faker } from "@faker-js/faker"
 
-export type Regional = "SP1" | "Franquias" | "Ne" | "mG" | "SPL"
+export type Regional = "SP1" | "Franquias" | "Ne" | "mG" | "SPL" | "GO" | "GO1"
 
 export interface Garage {
 	id: string
@@ -9,8 +9,6 @@ export interface Garage {
 	city: string
 	regional: Regional
 }
-
-const regionals: Regional[] = ["SP1", "Franquias", "Ne", "mG", "SPL"]
 
 const cityOptions = [
 	"Goiânia/GO",
@@ -64,10 +62,44 @@ const createAddress = (): string => {
 	return `${street}, ${streetNumber}`
 }
 
-export const garages: Garage[] = Array.from({ length: 120 }, (_, index) => ({
-	id: toGarageId(610 + index),
-	name: createGarageName(),
-	address: createAddress(),
-	city: faker.helpers.arrayElement(cityOptions),
-	regional: faker.helpers.arrayElement(regionals),
-}))
+const getRegionalByState = (city: string): Regional => {
+	const state = city.split("/")[1]
+
+	if (state === "SP") {
+		return city.startsWith("São Paulo") ? "SPL" : "SP1"
+	}
+
+	if (state === "MG") {
+		return "mG"
+	}
+
+	if (["PE", "BA", "CE", "RN", "PB"].includes(state)) {
+		return "Ne"
+	}
+
+	if (state === "GO") {
+		return city.startsWith("Goiânia") ? "GO" : "GO1"
+	}
+
+	return "Franquias"
+}
+
+const cities = Array.from({ length: 120 }, () =>
+	faker.helpers.arrayElement(cityOptions),
+)
+
+const cityCounters: Record<string, number> = {}
+
+export const garages: Garage[] = Array.from({ length: 120 }, (_, index) => {
+	const city = cities[index]
+	const currentCount = (cityCounters[city] ?? 0) + 1
+	cityCounters[city] = currentCount
+
+	return {
+		id: toGarageId(610 + index),
+		name: createGarageName(),
+		address: createAddress(),
+		city,
+		regional: currentCount > 10 ? "Franquias" : getRegionalByState(city),
+	}
+})
