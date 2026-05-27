@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router"
 import { AuthLayout } from "@/layouts/auth"
 import { DashboardLayout } from "@/layouts/dashboard"
+import { GaragePage } from "@/pages/garage"
 import { HomePage } from "@/pages/home"
 import { SignInPage } from "@/pages/sign-in"
 
@@ -22,6 +23,10 @@ export const routes = createBrowserRouter([
 			{
 				path: "/",
 				element: <HomePage />,
+			},
+			{
+				path: "/garagens",
+				element: <GaragePage />,
 			},
 		],
 	},
