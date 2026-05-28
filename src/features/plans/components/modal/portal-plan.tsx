@@ -56,7 +56,12 @@ export const PortalModal = ({
 						>
 							Cancelar
 						</Button>
-						<Button type="button" variant="primary" className="font-semibold">
+						<Button
+							type="submit"
+							form="portal-plan-form"
+							variant="primary"
+							className="font-semibold"
+						>
 							Criar
 						</Button>
 					</div>

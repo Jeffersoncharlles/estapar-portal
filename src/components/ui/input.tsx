@@ -10,6 +10,7 @@ const InputRoot = ({ className, ...props }: InputRootProps) => {
 				"group bg-white text-foreground ring-offset-background transition-colors",
 				"flex h-11 w-full items-center overflow-hidden rounded-sm border border-input",
 				"focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2",
+				"data-[error=true]:border-destructive data-[error=true]:focus-within:ring-destructive",
 				className,
 			)}
 			{...props}
@@ -37,7 +38,7 @@ const InputIcon = ({ className, ...props }: InputIconProps) => {
 	return (
 		<span
 			className={cn(
-				"flex h-full items-center px-3 text-muted-foreground",
+				"flex h-full items-center px-3 text-muted-foreground group-data-[error=true]:text-destructive",
 				className,
 			)}
 			{...props}
