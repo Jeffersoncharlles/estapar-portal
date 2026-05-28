@@ -1,13 +1,19 @@
 import * as Dialog from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { PortalForm } from "@/features/plans/components/modal/portal-form"
 
 interface PortalModalProps {
 	open: boolean
 	onOpenChange: (open: boolean) => void
+	planId?: string | number
 }
 
-export const PortalModal = ({ open, onOpenChange }: PortalModalProps) => {
+export const PortalModal = ({
+	open,
+	onOpenChange,
+	planId,
+}: PortalModalProps) => {
 	return (
 		<Dialog.Root open={open} onOpenChange={onOpenChange}>
 			<Dialog.Portal>
@@ -17,40 +23,42 @@ export const PortalModal = ({ open, onOpenChange }: PortalModalProps) => {
 						<div className="flex items-start justify-between gap-4">
 							<div>
 								<Dialog.Title className="text-lg font-semibold text-foreground">
-									Novo plano
+									{planId ? "Editar plano" : "Novo plano"}
 								</Dialog.Title>
 								<Dialog.Description className="mt-1 text-sm text-sheet-address-text">
-									Preencha os campos para criar um novo plano para a garagem.
+									{planId
+										? `Edite os campos do plano ${planId}.`
+										: "Preencha os campos para criar um novo plano para a garagem."}
 								</Dialog.Description>
 							</div>
 
 							<Dialog.Close asChild>
-								<button
+								<Button
 									type="button"
-									className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-sheet-sidebar-border text-sheet-close-icon transition-colors hover:bg-sheet-close-hover-bg hover:text-foreground"
+									variant="icon"
+									size="icon"
+									className="border-sheet-sidebar-border text-sheet-close-icon hover:bg-sheet-close-hover-bg"
 									aria-label="Fechar"
 								>
 									<X size={16} />
-								</button>
+								</Button>
 							</Dialog.Close>
 						</div>
 					</div>
 
 					<PortalForm />
 
-					<div className="flex flex-col-reverse gap-2 mb-6 bg-card px-5 py-4 md:flex-row md:justify-end md:px-6">
-						<button
+					<div className="mb-6 flex flex-col-reverse gap-2 bg-card px-5 py-4 md:flex-row md:justify-end md:px-6">
+						<Button
 							type="button"
-							className="inline-flex h-10 items-center justify-center rounded-md border border-muted-border bg-card px-4 text-sm font-medium text-sheet-table-action transition-colors hover:text-sheet-table-action-hover"
+							variant="outline"
+							className="text-sheet-table-action hover:text-sheet-table-action-hover"
 						>
 							Cancelar
-						</button>
-						<button
-							type="button"
-							className="inline-flex h-10 items-center justify-center rounded-md border border-primary bg-primary px-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-						>
+						</Button>
+						<Button type="button" variant="primary" className="font-semibold">
 							Criar
-						</button>
+						</Button>
 					</div>
 				</Dialog.Content>
 			</Dialog.Portal>

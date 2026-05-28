@@ -1,3 +1,4 @@
+import { Card } from "@/components/ui/card"
 import { Switch } from "@/components/ui/switch"
 import { GaragenSearch } from "./garagen-search"
 
@@ -17,7 +18,7 @@ export const GaragenHeader = ({
 	total,
 }: GaragenHeaderProps) => {
 	return (
-		<div className="rounded-md border border-muted-border bg-white p-4 md:p-5">
+		<Card.Root className="rounded-md p-4 md:p-5">
 			<div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
 				<div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
 					<Switch
@@ -33,6 +34,6 @@ export const GaragenHeader = ({
 				</p>
 				<GaragenSearch value={searchValue} onChange={onSearchChange} />
 			</div>
-		</div>
+		</Card.Root>
 	)
 }

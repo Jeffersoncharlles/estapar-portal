@@ -14,21 +14,21 @@ export const SheetPlansStats = ({
 }: SheetPlansStatsProps) => {
 	return (
 		<section className="my-0 grid shrink-0 grid-cols-1 gap-3 sm:grid-cols-2 md:my-auto md:grid-cols-[1fr_1fr_1fr_110px] md:gap-3">
-			<Card.Root className="rounded border border-sheet-sidebar-border shadow bg-sheet-panel-bg px-4 py-6">
+			<Card.Root className="rounded border border-sheet-sidebar-border bg-white shadow px-4 py-6">
 				<p className="text-base text-sheet-stats-label">Total de Vagas</p>
 				<p className="mt-2 flex items-center gap-1.5 text-2xl font-semibold">
 					<Car size={14} className="text-sheet-stats-icon" />
 					{totalSpots}
 				</p>
 			</Card.Root>
-			<Card.Root className="rounded border border-sheet-sidebar-border shadow bg-sheet-panel-bg px-4 py-6">
+			<Card.Root className="rounded border border-sheet-sidebar-border bg-white shadow px-4 py-6">
 				<p className="text-base text-sheet-stats-label">Ocupadas</p>
 				<p className="mt-2 flex items-center gap-1.5 text-2xl font-semibold">
 					<Users size={14} className="text-sheet-stats-icon" />
 					{occupiedSpots}
 				</p>
 			</Card.Root>
-			<Card.Root className="rounded border border-sheet-sidebar-border shadow bg-sheet-panel-bg px-4 py-6">
+			<Card.Root className="rounded border border-sheet-sidebar-border bg-white shadow px-4 py-6">
 				<p className="text-base text-sheet-stats-label">Disponiveis</p>
 				<p className="mt-2 flex items-center gap-1.5 text-2xl font-semibold text-sheet-stats-available-text">
 					<CircleDollarSign size={14} className="text-sheet-stats-available-icon" />

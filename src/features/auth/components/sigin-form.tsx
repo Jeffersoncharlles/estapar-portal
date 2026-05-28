@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form"
 import { useActionData, useNavigation, useSubmit } from "react-router"
 import { z } from "zod"
 import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 
 const signInFormSchema = z.object({
@@ -33,7 +34,7 @@ export const SignInForm = () => {
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<img src="/logo.svg" alt="Logo" className=" h-24 mx-auto mb-10" />
-			<div className="bg-white p-6 rounded-lg shadow-md">
+			<Card.Root className="shadow-md">
 				<p className="mb-8 text-gray-600">
 					Entre com suas credenciais para acessar o sistema
 				</p>
@@ -85,7 +86,7 @@ export const SignInForm = () => {
 					</div>
 					<Button disabled={navigation.state === "submitting"}>Entrar</Button>
 				</div>
-			</div>
+			</Card.Root>
 		</form>
 	)
 }

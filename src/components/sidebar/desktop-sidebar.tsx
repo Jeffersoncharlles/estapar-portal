@@ -1,5 +1,6 @@
 import * as Separator from "@radix-ui/react-separator"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { cn } from "@/core/shared/utils"
 import { PrimarySidebarContent } from "./primary-sidebar-content"
 
@@ -28,14 +29,16 @@ export const DesktopSidebar = ({
 				decorative
 			/>
 			<div className="mb-4 flex justify-end data-[state=collapsed]:justify-center">
-				<button
+				<Button
 					type="button"
+					variant="icon"
+					size="icon"
 					onClick={onToggleCollapsed}
-					className="absolute -right-3 top-24 z-10 -translate-y-1/2 rounded-full border border-sidebar-border bg-sidebar-background p-1 text-muted-foreground shadow-sm transition-colors hover:bg-gray-100 hover:text-foreground"
+					className="absolute -right-3 top-24 z-10 -translate-y-1/2 rounded-full border-sidebar-border bg-sidebar-background shadow-sm hover:bg-gray-100"
 					aria-label={isCollapsed ? "Expandir sidebar" : "Minificar sidebar"}
 				>
 					{isCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
-				</button>
+				</Button>
 			</div>
 			<PrimarySidebarContent collapsed={isCollapsed} />
 		</aside>

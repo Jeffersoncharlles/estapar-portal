@@ -1,9 +1,42 @@
+import { zodResolver } from "@hookform/resolvers/zod"
 import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
 import { DatePicker } from "@/components/ui/date-picker"
+import { Input } from "@/components/ui/input"
 import { Select } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
 
+const portalFormSchema = z.object({
+	description: z.string().min(1, "A descrição é obrigatória"),
+	isActive: z.boolean(),
+	vehicleType: z.enum(["carro", "moto", "suv", "utilitario"]),
+	totalSpots: z
+		.string()
+		.regex(/^\d+$/, "Total de vagas deve conter apenas números"),
+	monthlyValue: z
+		.string()
+		.regex(/^\d+$/, "Valor mensal deve conter apenas números"),
+	cancelValue: z
+		.string()
+		.regex(/^\d+$/, "Valor de cancelamento deve conter apenas números"),
+	validityStartDate: z.date().optional(),
+	validityEndDate: z.date().optional(),
+})
+
+type PortalFormData = z.infer<typeof portalFormSchema>
+
 export const PortalForm = () => {
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<PortalFormData>({
+		resolver: zodResolver(portalFormSchema),
+		defaultValues: {
+			// Defina os valores padrão aqui, se necessário
+		},
+	})
 	const [isActive, setIsActive] = useState(true)
 	const [totalSpots, setTotalSpots] = useState("120")
 	const [monthlyValue, setMonthlyValue] = useState("R$ 420,00")
@@ -44,11 +77,9 @@ export const PortalForm = () => {
 				>
 					Descriçāo
 				</label>
-				<input
-					id="plan-description"
-					defaultValue="Mensal Executivo"
-					className="h-10 w-full rounded-md border border-muted-border bg-card px-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:ring-2 focus:ring-ring"
-				/>
+				<Input.Root>
+					<Input.Content id="plan-description" defaultValue="Mensal Executivo" />
+				</Input.Root>
 			</div>
 
 			<div className="space-y-1.5">
@@ -119,15 +150,16 @@ export const PortalForm = () => {
 				>
 					Total de vagas
 				</label>
-				<input
-					id="total-spots"
-					type="text"
-					inputMode="numeric"
-					pattern="[0-9]*"
-					value={totalSpots}
-					onChange={(event) => handleTotalSpotsChange(event.target.value)}
-					className="h-10 w-full rounded-md border border-muted-border bg-card px-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:ring-2 focus:ring-ring"
-				/>
+				<Input.Root>
+					<Input.Content
+						id="total-spots"
+						type="text"
+						inputMode="numeric"
+						pattern="[0-9]*"
+						value={totalSpots}
+						onChange={(event) => handleTotalSpotsChange(event.target.value)}
+					/>
+				</Input.Root>
 			</div>
 
 			<div title="valor" className="space-y-1.5">
@@ -137,14 +169,15 @@ export const PortalForm = () => {
 				>
 					Valor (R$)
 				</label>
-				<input
-					id="monthly-value"
-					type="text"
-					inputMode="numeric"
-					value={monthlyValue}
-					onChange={(event) => handleMonthlyValueChange(event.target.value)}
-					className="h-10 w-full rounded-md border border-muted-border bg-card px-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:ring-2 focus:ring-ring"
-				/>
+				<Input.Root>
+					<Input.Content
+						id="monthly-value"
+						type="text"
+						inputMode="numeric"
+						value={monthlyValue}
+						onChange={(event) => handleMonthlyValueChange(event.target.value)}
+					/>
+				</Input.Root>
 
 				<div className="relative mt-3 space-y-1.5">
 					<label
@@ -169,14 +202,15 @@ export const PortalForm = () => {
 				>
 					Valor de Cancelamento (R$)
 				</label>
-				<input
-					id="cancel-value"
-					type="text"
-					inputMode="numeric"
-					value={cancelValue}
-					onChange={(event) => handleCancelValueChange(event.target.value)}
-					className="h-10 w-full rounded-md border border-muted-border bg-card px-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:ring-2 focus:ring-ring"
-				/>
+				<Input.Root>
+					<Input.Content
+						id="cancel-value"
+						type="text"
+						inputMode="numeric"
+						value={cancelValue}
+						onChange={(event) => handleCancelValueChange(event.target.value)}
+					/>
+				</Input.Root>
 
 				<div className="relative mt-3 space-y-1.5">
 					<label

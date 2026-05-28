@@ -1,5 +1,6 @@
-import { Check, FilePenLine } from "lucide-react"
+import { SquarePen } from "lucide-react"
 import { useState } from "react"
+import { Button } from "@/components/ui/button"
 import { Table } from "@/components/ui/table"
 import type { GaragePlan } from "@/core/mocks/garage-plans"
 import { PortalModal } from "../modal/portal-plan"
@@ -14,6 +15,17 @@ export const SheetPlansTable = ({
 	formatCurrency,
 }: SheetPlansTableProps) => {
 	const [isNewPlanModalOpen, setIsNewPlanModalOpen] = useState(false)
+	const [selectedPlanId, setSelectedPlanId] = useState<string | number | undefined>()
+
+	const handleOpenNewPlanModal = () => {
+		setSelectedPlanId(undefined)
+		setIsNewPlanModalOpen(true)
+	}
+
+	const handleOpenEditPlanModal = (planId: string | number) => {
+		setSelectedPlanId(planId)
+		setIsNewPlanModalOpen(true)
+	}
 
 	return (
 		<>
@@ -22,13 +34,14 @@ export const SheetPlansTable = ({
 					<h3 className="text-sm font-semibold text-muted">
 						Planos Disponiveis
 					</h3>
-					<button
+					<Button
 						type="button"
-						onClick={() => setIsNewPlanModalOpen(true)}
-						className="rounded border border-sheet-cta-border bg-sheet-cta-bg px-3 py-1 text-xs font-medium text-sheet-cta-text"
+						variant="secondary"
+						size="sm"
+						onClick={handleOpenNewPlanModal}
 					>
 						+ Novo Plano
-					</button>
+					</Button>
 				</div>
 
 				<div className="max-h-[calc(100%-2.5rem)] overflow-auto rounded border border-sheet-table-border bg-card">
@@ -70,12 +83,15 @@ export const SheetPlansTable = ({
 												</span>
 											</Table.BodyCell>
 											<Table.BodyCell className="px-3 py-2">
-												<button
-													type="button"
-													className="text-sheet-table-action hover:text-sheet-table-action-hover"
-												>
-													<Check size={14} />
-												</button>
+											<Button
+												type="button"
+												variant="icon"
+												size="icon"
+												onClick={() => handleOpenEditPlanModal(plan.garageId)}
+												className="h-6 w-6 text-sheet-table-action hover:text-sheet-table-action-hover"
+											>
+												<SquarePen size={14} />
+											</Button>
 											</Table.BodyCell>
 										</Table.Row>
 									)
@@ -93,12 +109,15 @@ export const SheetPlansTable = ({
 										</span>
 									</Table.BodyCell>
 									<Table.BodyCell className="px-3 py-2">
-										<button
-											type="button"
-											className="text-sheet-table-action hover:text-sheet-table-action-hover cursor-pointer"
-										>
-											<FilePenLine size={14} />
-										</button>
+									<Button
+										type="button"
+										variant="icon"
+										size="icon"
+										disabled
+										className="h-6 w-6 text-sheet-table-action hover:text-sheet-table-action-hover"
+									>
+											<SquarePen size={14} />
+									</Button>
 									</Table.BodyCell>
 								</Table.Row>
 							)}
@@ -110,6 +129,7 @@ export const SheetPlansTable = ({
 			<PortalModal
 				open={isNewPlanModalOpen}
 				onOpenChange={setIsNewPlanModalOpen}
+				planId={selectedPlanId}
 			/>
 		</>
 	)

@@ -68,13 +68,15 @@ function SheetContent({
 				{children}
 				{showCloseButton && (
 					<SheetPrimitive.Close data-slot="sheet-close" asChild>
-						<button
+						<Button
 							type="button"
-							className="absolute cursor-pointer top-4 right-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
+							variant="icon"
+							size="icon"
+							className="absolute top-4 right-4 rounded-sm opacity-70 hover:opacity-100 data-[state=open]:bg-secondary"
 						>
 							<XIcon className="size-8" />
 							<span className="sr-only">Close</span>
-						</button>
+						</Button>
 					</SheetPrimitive.Close>
 				)}
 			</SheetPrimitive.Content>
