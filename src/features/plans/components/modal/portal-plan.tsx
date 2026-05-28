@@ -1,5 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
+import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import type { GaragePlan } from "@/core/mocks/garage-plans"
 import { toPortalVehicleType } from "@/features/plans/api/types"
@@ -22,7 +23,13 @@ export const PortalModal = ({
 	const { mutate, isPending } = useSaveGaragePlanMutation({
 		garageId,
 		plan,
-		onSuccess: () => onOpenChange(false),
+		onSuccess: () => {
+			toast.success(plan ? "Plano atualizado com sucesso." : "Plano criado com sucesso.")
+			onOpenChange(false)
+		},
+		onError: () => {
+			toast.error("Nao foi possivel salvar o plano. Tente novamente.")
+		},
 	})
 
 	const initialData = plan

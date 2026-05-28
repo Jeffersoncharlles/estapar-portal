@@ -14,7 +14,7 @@ export const DashboardLayout = () => {
 				setIsMobileOpen={setIsMobileSidebarOpen}
 			/>
 			<div className="flex min-h-screen flex-1 flex-col bg-white">
-				<DashboardHeader userName="Usuario" />
+				<DashboardHeader />
 				<main className="flex-1 bg-white p-4 pt-20 md:p-6 md:pt-6">
 					<Outlet />
 				</main>
