@@ -1,7 +1,7 @@
+import { QueryClientProvider } from "@tanstack/react-query"
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { Toaster } from "sonner"
-import { QueryClientProvider } from "@tanstack/react-query"
 import { queryClient } from "@/core/services/query-client"
 import "./index.css"
 import { AppRoutes } from "./routes"
@@ -10,10 +10,12 @@ const root = document.getElementById("root") as HTMLElement
 
 async function enableMocking() {
 	// Se não for desenvolvimento, sai fora imediatamente
-	if (import.meta.env.MODE !== "development") {
+	const isMockEnabled =
+		import.meta.env.VITE_ENABLE_MOCKS === "true" || import.meta.env.DEV
+
+	if (!isMockEnabled) {
 		return
 	}
-
 	const { worker } = await import("./core/mocks/browser")
 
 	// O 'return' aqui é crucial! Ele obriga o .then() lá de baixo

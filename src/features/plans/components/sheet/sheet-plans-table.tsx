@@ -8,22 +8,24 @@ import { PortalModal } from "../modal/portal-plan"
 interface SheetPlansTableProps {
 	plans: GaragePlan[]
 	formatCurrency: (value: number) => string
+	garageId: string
 }
 
 export const SheetPlansTable = ({
 	plans,
 	formatCurrency,
+	garageId,
 }: SheetPlansTableProps) => {
 	const [isNewPlanModalOpen, setIsNewPlanModalOpen] = useState(false)
-	const [selectedPlanId, setSelectedPlanId] = useState<string | number | undefined>()
+	const [selectedPlan, setSelectedPlan] = useState<GaragePlan | undefined>()
 
 	const handleOpenNewPlanModal = () => {
-		setSelectedPlanId(undefined)
+		setSelectedPlan(undefined)
 		setIsNewPlanModalOpen(true)
 	}
 
-	const handleOpenEditPlanModal = (planId: string | number) => {
-		setSelectedPlanId(planId)
+	const handleOpenEditPlanModal = (plan: GaragePlan) => {
+		setSelectedPlan(plan)
 		setIsNewPlanModalOpen(true)
 	}
 
@@ -63,7 +65,7 @@ export const SheetPlansTable = ({
 									const totalByType = plan.totalSpotsByVehicleType ?? 0
 									return (
 										<Table.Row
-											key={`${plan.garageId}`}
+											key={`${plan.garageId}-${plan.description}-${plan.vehicleType}-${plan.validityStart}-${plan.validityEnd}`}
 											className="border-t border-sheet-table-row-border transition-colors hover:bg-background-secondary"
 										>
 											<Table.BodyCell className="px-3 py-2">
@@ -87,7 +89,7 @@ export const SheetPlansTable = ({
 												type="button"
 												variant="icon"
 												size="icon"
-												onClick={() => handleOpenEditPlanModal(plan.garageId)}
+												onClick={() => handleOpenEditPlanModal(plan)}
 												className="h-6 w-6 text-sheet-table-action hover:text-sheet-table-action-hover"
 											>
 												<SquarePen size={14} />
@@ -129,7 +131,8 @@ export const SheetPlansTable = ({
 			<PortalModal
 				open={isNewPlanModalOpen}
 				onOpenChange={setIsNewPlanModalOpen}
-				planId={selectedPlanId}
+				plan={selectedPlan}
+				garageId={garageId}
 			/>
 		</>
 	)

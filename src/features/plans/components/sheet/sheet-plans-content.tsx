@@ -2,9 +2,9 @@ import * as Separator from "@radix-ui/react-separator"
 import { useQuery } from "@tanstack/react-query"
 import { useState } from "react"
 import { redirect } from "react-router"
-import type { GaragePlan } from "@/core/mocks/garage-plans"
-import { fetchGarageDetails, fetchGaragePlans } from "@/core/services/api"
+import { fetchGarageDetails } from "@/core/services/api"
 import { formatCurrencyCoins } from "@/core/shared/format-current-coins"
+import { useGaragePlansQuery } from "@/features/plans/api/use-garage-plans-query"
 import { SheetPlansAddress } from "@/features/plans/components/sheet/sheet-plans-address"
 import { SheetPlansHeader } from "@/features/plans/components/sheet/sheet-plans-header"
 import { SheetPlansMainTab } from "@/features/plans/components/sheet/sheet-plans-main-tab"
@@ -44,11 +44,7 @@ export const SheetPlansContent = ({
 		data: plans = [],
 		isLoading: isLoadingPlans,
 		isError: isPlansError,
-	} = useQuery<GaragePlan[]>({
-		queryKey: ["garages", "plans", garageId],
-		queryFn: () => fetchGaragePlans(garageId as string),
-		enabled: !!garageId,
-	})
+	} = useGaragePlansQuery(garageId)
 
 	const isLoading = isLoadingDetails || isLoadingPlans
 	const hasError = isDetailsError || isPlansError
@@ -105,7 +101,11 @@ export const SheetPlansContent = ({
 						selectedMenu={selectedMenu}
 						onSelectMenu={setSelectedMenu}
 					/>
-					<SheetPlansTable plans={plans} formatCurrency={formatCurrencyCoins} />
+					<SheetPlansTable
+						plans={plans}
+						formatCurrency={formatCurrencyCoins}
+						garageId={garageId as string}
+					/>
 				</div>
 			</section>
 		</section>

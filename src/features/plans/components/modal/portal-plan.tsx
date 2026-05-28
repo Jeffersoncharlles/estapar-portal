@@ -1,19 +1,43 @@
 import * as Dialog from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import type { GaragePlan } from "@/core/mocks/garage-plans"
+import { toPortalVehicleType } from "@/features/plans/api/types"
+import { useSaveGaragePlanMutation } from "@/features/plans/api/use-save-garage-plan-mutation"
 import { PortalForm } from "@/features/plans/components/modal/portal-form"
 
 interface PortalModalProps {
 	open: boolean
 	onOpenChange: (open: boolean) => void
-	planId?: string | number
+	garageId: string
+	plan?: GaragePlan
 }
 
 export const PortalModal = ({
 	open,
 	onOpenChange,
-	planId,
+	garageId,
+	plan,
 }: PortalModalProps) => {
+	const { mutate, isPending } = useSaveGaragePlanMutation({
+		garageId,
+		plan,
+		onSuccess: () => onOpenChange(false),
+	})
+
+	const initialData = plan
+		? {
+				description: plan.description,
+				isActive: true,
+				vehicleType: toPortalVehicleType(plan.vehicleType),
+				totalSpots: plan.totalSpotsByVehicleType ?? 0,
+				monthlyValue: Math.round((plan.price ?? 0) * 100),
+				cancelValue: Math.round((plan.cancellationFee ?? 0) * 100),
+				validityStartDate: plan.validityStart,
+				validityEndDate: plan.validityEnd,
+			}
+		: undefined
+
 	return (
 		<Dialog.Root open={open} onOpenChange={onOpenChange}>
 			<Dialog.Portal>
@@ -23,11 +47,11 @@ export const PortalModal = ({
 						<div className="flex items-start justify-between gap-4">
 							<div>
 								<Dialog.Title className="text-lg font-semibold text-foreground">
-									{planId ? "Editar plano" : "Novo plano"}
+									{plan ? "Editar plano" : "Novo plano"}
 								</Dialog.Title>
 								<Dialog.Description className="mt-1 text-sm text-sheet-address-text">
-									{planId
-										? `Edite os campos do plano ${planId}.`
+									{plan
+										? `Edite os campos do plano ${plan.description}.`
 										: "Preencha os campos para criar um novo plano para a garagem."}
 								</Dialog.Description>
 							</div>
@@ -46,7 +70,7 @@ export const PortalModal = ({
 						</div>
 					</div>
 
-					<PortalForm />
+					<PortalForm initialData={initialData} onSubmit={mutate} />
 
 					<div className="mb-6 flex flex-col-reverse gap-2 bg-card px-5 py-4 md:flex-row md:justify-end md:px-6">
 						<Dialog.Close asChild>
@@ -62,9 +86,10 @@ export const PortalModal = ({
 							type="submit"
 							form="portal-plan-form"
 							variant="primary"
+							disabled={isPending}
 							className="font-semibold"
 						>
-							Criar
+							{isPending ? "Salvando..." : plan ? "Salvar" : "Criar"}
 						</Button>
 					</div>
 				</Dialog.Content>

@@ -1,94 +1,27 @@
-import { zodResolver } from "@hookform/resolvers/zod"
-import { Controller, useForm } from "react-hook-form"
-import { z } from "zod"
+import { Controller } from "react-hook-form"
 import { DatePicker } from "@/components/ui/date-picker"
 import { Input } from "@/components/ui/input"
 import { Select } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
-
-const portalFormSchema = z.object({
-	description: z.string().min(1, "A descrição é obrigatória"),
-	isActive: z.boolean(),
-	vehicleType: z.enum(["carro", "moto", "suv", "utilitario"]),
-	totalSpots: z.number().int().nonnegative(),
-	monthlyValue: z.number().int().nonnegative(),
-	cancelValue: z.number().int().nonnegative(),
-	validityStartDate: z
-		.date()
-		.optional()
-		.transform((value) => (value ? value.getTime() : undefined)),
-	validityEndDate: z
-		.date()
-		.optional()
-		.transform((value) => (value ? value.getTime() : undefined)),
-})
-
-type PortalFormInput = z.input<typeof portalFormSchema>
-type PortalFormOutput = z.output<typeof portalFormSchema>
-
-type PortalFormDateValue = Date | number | string | undefined
-
-interface PortalFormInitialData {
-	description?: string
-	isActive?: boolean
-	vehicleType?: PortalFormInput["vehicleType"]
-	totalSpots?: number
-	monthlyValue?: number
-	cancelValue?: number
-	validityStartDate?: PortalFormDateValue
-	validityEndDate?: PortalFormDateValue
-}
+import { formatBRLFromCents } from "@/core/shared/format-current-coins"
+import type {
+	PortalFormInitialData,
+	PortalPlanFormData,
+} from "@/features/plans/api/types"
+import { usePortalPlanForm } from "@/features/plans/api/use-portal-plan-form"
 
 interface PortalFormProps {
 	initialData?: PortalFormInitialData
+	onSubmit: (data: PortalPlanFormData) => void
 }
 
-const toDateValue = (value: PortalFormDateValue) => {
-	if (value === undefined || value === null || value === "") return undefined
-
-	if (value instanceof Date) {
-		return Number.isNaN(value.getTime()) ? undefined : value
-	}
-
-	if (typeof value === "number") {
-		const parsed = new Date(value)
-		return Number.isNaN(parsed.getTime()) ? undefined : parsed
-	}
-
-	const parsed = new Date(value)
-	return Number.isNaN(parsed.getTime()) ? undefined : parsed
-}
-
-export const PortalForm = ({ initialData }: PortalFormProps) => {
-	const { register, handleSubmit, control } = useForm<
-		PortalFormInput,
-		unknown,
-		PortalFormOutput
-	>({
-		resolver: zodResolver(portalFormSchema),
-		defaultValues: {
-			description: initialData?.description ?? "Mensal Executivo",
-			isActive: initialData?.isActive ?? true,
-			vehicleType: initialData?.vehicleType ?? "carro",
-			totalSpots: initialData?.totalSpots ?? 0,
-			monthlyValue: initialData?.monthlyValue ?? 0,
-			cancelValue: initialData?.cancelValue ?? 0,
-			validityStartDate: toDateValue(initialData?.validityStartDate) ?? new Date(),
-			validityEndDate: toDateValue(initialData?.validityEndDate),
-		},
-	})
-
-	const formatBRLFromCents = (valueInCents: number) => {
-		return new Intl.NumberFormat("pt-BR", {
-			style: "currency",
-			currency: "BRL",
-		}).format(valueInCents / 100)
-	}
+export const PortalForm = ({ initialData, onSubmit }: PortalFormProps) => {
+	const { register, handleSubmit, control } = usePortalPlanForm(initialData)
 
 	const extractDigits = (value: string) => value.replace(/\D/g, "")
 
-	const handleOnSubmit = (data: PortalFormOutput) => {
-		console.log("Form data:", data)
+	const handleOnSubmit = (data: PortalPlanFormData) => {
+		onSubmit(data)
 	}
 
 	return (
@@ -169,6 +102,7 @@ export const PortalForm = ({ initialData }: PortalFormProps) => {
 									["moto", "Moto"],
 									["suv", "SUV"],
 									["utilitario", "Utilitario"],
+									["eletrico", "Eletrico"],
 								].map(([value, label]) => (
 									<Select.Item
 										key={value}
