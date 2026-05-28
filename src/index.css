@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "react-day-picker/style.css";
 
 @theme {
 	--radius-sm: var(--radius-sm);
@@ -76,7 +77,7 @@
 	--border: var(--muted-border);
 	--input: var(--muted-border);
 	--ring: #7ad33e;
-	--sheet-tab-background: #d9d9d9;
+	--sheet-tab-background: #f4f4f5;
 	--sheet-tab-selected: #309365;
 	--sheet-sidebar-selected: #62a932;
 	--sheet-overlay: rgb(0 0 0 / 0.8);
@@ -133,7 +134,7 @@
 	--border: var(--muted-border);
 	--input: var(--muted-border);
 	--ring: #7ad33e;
-	--sheet-tab-background: #d9d9d9;
+	--sheet-tab-background: #f4f4f5;
 	--sheet-tab-selected: #309365;
 	--sheet-sidebar-selected: #62a932;
 	--sheet-overlay: rgb(0 0 0 / 0.8);

@@ -1,4 +1,5 @@
 import { Building2, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { SheetClose } from "@/components/ui/sheet"
 
 interface SheetPlansHeaderProps {
@@ -25,12 +26,14 @@ export const SheetPlansHeader = ({
 			</div>
 			{isSheet ? (
 				<SheetClose asChild>
-					<button
+					<Button
 						type="button"
-						className="rounded p-1 text-sheet-close-icon hover:bg-sheet-close-hover-bg"
+						variant="icon"
+						size="icon"
+						className="text-sheet-close-icon hover:bg-sheet-close-hover-bg"
 					>
 						<X size={16} />
-					</button>
+					</Button>
 				</SheetClose>
 			) : null}
 		</header>

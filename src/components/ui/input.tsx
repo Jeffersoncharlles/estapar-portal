@@ -7,7 +7,7 @@ const InputRoot = ({ className, ...props }: InputRootProps) => {
 	return (
 		<div
 			className={cn(
-				"group bg-background text-foreground ring-offset-background transition-colors",
+				"group bg-white text-foreground ring-offset-background transition-colors",
 				"flex h-11 w-full items-center overflow-hidden rounded-sm border border-input",
 				"focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2",
 				className,
