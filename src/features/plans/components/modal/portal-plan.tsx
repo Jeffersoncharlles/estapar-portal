@@ -49,13 +49,15 @@ export const PortalModal = ({
 					<PortalForm />
 
 					<div className="mb-6 flex flex-col-reverse gap-2 bg-card px-5 py-4 md:flex-row md:justify-end md:px-6">
-						<Button
-							type="button"
-							variant="outline"
-							className="text-sheet-table-action hover:text-sheet-table-action-hover"
-						>
-							Cancelar
-						</Button>
+						<Dialog.Close asChild>
+							<Button
+								type="button"
+								variant="outline"
+								className="text-sheet-table-action hover:text-sheet-table-action-hover"
+							>
+								Cancelar
+							</Button>
+						</Dialog.Close>
 						<Button
 							type="submit"
 							form="portal-plan-form"

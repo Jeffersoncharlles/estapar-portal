@@ -1,6 +1,8 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { Toaster } from "sonner"
+import { QueryClientProvider } from "@tanstack/react-query"
+import { queryClient } from "@/core/services/query-client"
 import "./index.css"
 import { AppRoutes } from "./routes"
 
@@ -25,8 +27,10 @@ async function enableMocking() {
 enableMocking().then(() => {
 	createRoot(root).render(
 		<StrictMode>
-			<Toaster richColors />
-			<AppRoutes />
+			<QueryClientProvider client={queryClient}>
+				<Toaster richColors />
+				<AppRoutes />
+			</QueryClientProvider>
 		</StrictMode>,
 	)
 })

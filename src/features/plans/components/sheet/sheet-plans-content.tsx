@@ -1,8 +1,10 @@
 import * as Separator from "@radix-ui/react-separator"
-import { useEffect, useState } from "react"
+import { useQuery } from "@tanstack/react-query"
+import { useState } from "react"
 import { redirect } from "react-router"
 import type { GaragePlan } from "@/core/mocks/garage-plans"
 import { fetchGarageDetails, fetchGaragePlans } from "@/core/services/api"
+import { formatCurrencyCoins } from "@/core/shared/format-current-coins"
 import { SheetPlansAddress } from "@/features/plans/components/sheet/sheet-plans-address"
 import { SheetPlansHeader } from "@/features/plans/components/sheet/sheet-plans-header"
 import { SheetPlansMainTab } from "@/features/plans/components/sheet/sheet-plans-main-tab"
@@ -12,14 +14,6 @@ import {
 } from "@/features/plans/components/sheet/sheet-plans-sidebar"
 import { SheetPlansStats } from "@/features/plans/components/sheet/sheet-plans-stats"
 import { SheetPlansTable } from "@/features/plans/components/sheet/sheet-plans-table"
-import type { GaragensDetailsResponse } from "@/features/plans/types/plans-api"
-
-const formatCurrency = (value: number) => {
-	return new Intl.NumberFormat("pt-BR", {
-		style: "currency",
-		currency: "BRL",
-	}).format(value)
-}
 
 interface SheetPlansContentProps {
 	garageId?: string
@@ -31,40 +25,33 @@ export const SheetPlansContent = ({
 	isSheet,
 }: SheetPlansContentProps) => {
 	const [selectedMenu, setSelectedMenu] = useState<SheetPlansMenu>("planos")
-	const [details, setDetails] = useState<GaragensDetailsResponse | null>(null)
-	const [plans, setPlans] = useState<GaragePlan[]>([])
-	const [isLoading, setIsLoading] = useState(true)
-	const [error, setError] = useState<string | null>(null)
 
 	if (!garageId) {
 		redirect("/garagens")
 	}
 
-	useEffect(() => {
-		if (!garageId) return
+	const {
+		data: details,
+		isLoading: isLoadingDetails,
+		isError: isDetailsError,
+	} = useQuery({
+		queryKey: ["garages", "details", garageId],
+		queryFn: () => fetchGarageDetails(garageId as string),
+		enabled: !!garageId,
+	})
 
-		const loadGarageData = async () => {
-			setIsLoading(true)
-			setError(null)
+	const {
+		data: plans = [],
+		isLoading: isLoadingPlans,
+		isError: isPlansError,
+	} = useQuery<GaragePlan[]>({
+		queryKey: ["garages", "plans", garageId],
+		queryFn: () => fetchGaragePlans(garageId as string),
+		enabled: !!garageId,
+	})
 
-			try {
-				const [detailsResponse, plansResponse] = await Promise.all([
-					fetchGarageDetails(garageId),
-					fetchGaragePlans(garageId),
-				])
-				setDetails(detailsResponse)
-				setPlans(plansResponse)
-			} catch {
-				setError("Nao foi possivel carregar os detalhes da garagem.")
-				setDetails(null)
-				setPlans([])
-			} finally {
-				setIsLoading(false)
-			}
-		}
-
-		loadGarageData()
-	}, [garageId])
+	const isLoading = isLoadingDetails || isLoadingPlans
+	const hasError = isDetailsError || isPlansError
 
 	const totalSpots = details?.totalSpots ?? 0
 	const occupiedSpots = details?.occupiedSpots ?? 0
@@ -80,8 +67,10 @@ export const SheetPlansContent = ({
 
 	return (
 		<section className="flex h-full w-full flex-col rounded-md bg-card text-muted">
-			{error ? (
-				<p className="px-4 pt-3 text-sm text-destructive md:px-6">{error}</p>
+			{hasError ? (
+				<p className="px-4 pt-3 text-sm text-destructive md:px-6">
+					Nao foi possivel carregar os detalhes da garagem.
+				</p>
 			) : null}
 
 			<SheetPlansHeader
@@ -116,7 +105,7 @@ export const SheetPlansContent = ({
 						selectedMenu={selectedMenu}
 						onSelectMenu={setSelectedMenu}
 					/>
-					<SheetPlansTable plans={plans} formatCurrency={formatCurrency} />
+					<SheetPlansTable plans={plans} formatCurrency={formatCurrencyCoins} />
 				</div>
 			</section>
 		</section>
