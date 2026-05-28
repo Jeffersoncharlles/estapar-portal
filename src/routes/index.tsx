@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router"
-
+import { SignInEventsAction } from "@/features/auth/api/sign-in-events"
 import { SheetPlans } from "@/features/plans/components/sheet/sheet-plans"
 import { AuthLayout } from "@/layouts/auth"
 import { DashboardLayout } from "@/layouts/dashboard"
@@ -12,6 +12,7 @@ export const routes = createBrowserRouter([
 	{
 		element: <AuthLayout />,
 		loader: async () => {},
+		action: SignInEventsAction,
 		children: [
 			{
 				path: "/sign-in",
