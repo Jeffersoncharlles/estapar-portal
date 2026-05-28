@@ -1,5 +1,6 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
+import { Toaster } from "sonner"
 import "./index.css"
 import { AppRoutes } from "./routes"
 
@@ -24,6 +25,7 @@ async function enableMocking() {
 enableMocking().then(() => {
 	createRoot(root).render(
 		<StrictMode>
+			<Toaster richColors />
 			<AppRoutes />
 		</StrictMode>,
 	)

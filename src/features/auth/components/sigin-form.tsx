@@ -34,11 +34,11 @@ export const SignInForm = () => {
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<img src="/logo.svg" alt="Logo" className=" h-24 mx-auto mb-10" />
-			<Card.Root className="shadow-md">
+			<Card.Root className="shadow-md hover:bg-white">
 				<p className="mb-8 text-gray-600">
 					Entre com suas credenciais para acessar o sistema
 				</p>
-				<div className="space-y-6">
+				<div className="space-y-2">
 					<div className="space-y-3">
 						<label
 							htmlFor="email"
@@ -46,20 +46,33 @@ export const SignInForm = () => {
 						>
 							Usuário
 						</label>
-						<Input.Root>
+						<Input.Root
+							data-error={!!errors.userName}
+							className={
+								errors.userName
+									? "border-destructive focus-within:ring-destructive"
+									: undefined
+							}
+						>
 							<Input.Icon>
 								<User2 className="w-4 h-4 text-gray-400" />
 							</Input.Icon>
 							<Input.Content
 								placeholder="Digite seu usuário"
+								aria-invalid={!!errors.userName}
 								{...register("userName")}
 							/>
-							{errors.userName && (
-								<p className="text-xs text-destructive">
-									{errors.userName.message}
-								</p>
-							)}
 						</Input.Root>
+						<p
+							className={
+								errors.userName
+									? "min-h-4 text-xs text-destructive"
+									: "min-h-4 text-xs text-transparent"
+							}
+							aria-live="polite"
+						>
+							{errors.userName?.message ?? " "}
+						</p>
 					</div>
 					<div className="space-y-3">
 						<label
@@ -68,21 +81,34 @@ export const SignInForm = () => {
 						>
 							Senha
 						</label>
-						<Input.Root>
+						<Input.Root
+							data-error={!!errors.password}
+							className={
+								errors.password
+									? "border-destructive focus-within:ring-destructive"
+									: undefined
+							}
+						>
 							<Input.Icon>
 								<Lock className="w-4 h-4 text-gray-400" />
 							</Input.Icon>
 							<Input.Content
 								type="password"
 								placeholder="Digite sua senha"
+								aria-invalid={!!errors.password}
 								{...register("password")}
 							/>
-							{errors.password && (
-								<p className="text-xs text-destructive">
-									{errors.password.message}
-								</p>
-							)}
 						</Input.Root>
+						<p
+							className={
+								errors.password
+									? "min-h-4 text-xs text-destructive"
+									: "min-h-4 text-xs text-transparent"
+							}
+							aria-live="polite"
+						>
+							{errors.password?.message ?? " "}
+						</p>
 					</div>
 					<Button disabled={navigation.state === "submitting"}>Entrar</Button>
 				</div>

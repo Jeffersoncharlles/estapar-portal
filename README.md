@@ -4,10 +4,11 @@ Portal web em React para visualizacao de dados de garagens, planos e dashboard i
 
 ## Visao geral
 
-- Stack principal: React 19 + TypeScript + Vite + Tailwind CSS v4.
+- Stack principal: React 19 + TypeScript 6 + Vite 8 + Tailwind CSS v4.
 - Roteamento via `react-router`.
 - UI baseada em componentes proprios e primitives Radix.
-- Dados atualmente mockados em `src/core/mocks` (JSON e geradores TS).
+- Comunicacao HTTP via `axios` (camada em `src/core/services/api.ts`).
+- Dados atualmente mockados com MSW em `src/core/mocks`.
 
 ## Arquitetura do projeto
 
@@ -18,15 +19,30 @@ src/
   components/         # Componentes compartilhados (UI, sidebar, header)
     ui/               # Componentes base (button, input, sheet, table, etc.)
   core/
+    hooks/            # Hooks reutilizaveis (debounce, click outside)
+    services/         # Servicos de infraestrutura (API client)
     mocks/            # Dados mockados e geradores de dados
     shared/           # Utilitarios compartilhados
   features/           # Modulos por dominio (auth, garages, home, plans)
+    auth/
+      api/            # Actions/eventos de autenticacao
+      components/     # Formularios e blocos visuais de login
+    garages/
+      api/            # Loaders/eventos de garagens
+      components/     # Header, busca, tabela e estados de loading
+      types/          # Tipagens de resposta e entidades de dominio
+    home/
+      components/     # Blocos do dashboard inicial
     plans/
+      api/            # Eventos e carga de dados de planos
       components/
+        modal/        # Modal e formulario de cadastro/edicao
         sheet/        # Componentes do sheet de planos
+      types/          # Tipagens de planos
   layouts/            # Layouts de pagina (auth, dashboard)
   pages/              # Entradas de tela
   routes/             # Configuracao de rotas
+  test/               # Setup de testes
 ```
 
 ### Padrao adotado
@@ -35,11 +51,15 @@ src/
 - Componentes base reutilizaveis em `components/ui`.
 - Layouts desacoplados das pages.
 - Tokens de tema e cores centralizados em `src/index.css`.
+- Fluxo de dados de rota via `loaders` e `actions` do React Router:
+  - `loaders` para pre-carregar dados antes da renderizacao de paginas (ex.: garagens).
+  - `actions` para tratar submits/mutacoes de formulario (ex.: sign-in).
 
 ## Fluxos atuais importantes
 
 - Garagens:
   - Tabela em `src/features/garages/components/garagen-table.tsx`.
+  - Loader de rota em `src/features/garages/api/garages-events.ts`.
   - Abertura de detalhes por sheet (`SheetPlans`).
 
 - Plans (Sheet):
@@ -54,44 +74,61 @@ src/
 
 - Rotas:
   - Definidas em `src/routes/index.tsx`.
+  - Principais caminhos:
+    - `/sign-in`
+    - `/`
+    - `/garagens`
+    - `/plans/:planId`
 
 ## Como rodar o projeto
 
 Pre-requisitos:
 
 - Node.js 20+
-- npm (ou pnpm)
+- pnpm 9+ (recomendado)
+- npm 10+ (alternativo)
 
-Instalacao:
+Instalacao com pnpm:
 
 ```bash
+# Instala todas as dependencias do projeto via pnpm
+pnpm install
+pnpm dev #rodar em modo dev
+pnpm build #build de produçāo
+pnpm preview #build de preview
+
+# Instala todas as dependencias do projeto via npm
 npm install
-```
-
-Ambiente de desenvolvimento:
-
-```bash
-npm run dev
-```
-
-Build de producao:
-
-```bash
-npm run build
-```
-
-Preview do build:
-
-```bash
-npm run preview
+npm run dev #rodar em modo dev
+npm run build #build de produçāo
+npm run preview #build de preview
 ```
 
 Checagens:
 
 ```bash
+pnpm typecheck
+pnpm lint
+pnpm test
+
+# ou via npm
 npm run typecheck
 npm run lint
 npm run test
+```
+
+## Qualidade de codigo
+
+- Lint e formatacao com Biome (`biome.json`).
+- Testes unitarios com Vitest + Testing Library (`jsdom`).
+- Hooks de Git com Lefthook (`lefthook.yml`):
+  - `pre-commit`: formatacao de arquivos staged.
+  - `pre-push`: `typecheck` + `biome lint`.
+
+Para instalar hooks localmente (quando necessario):
+
+```bash
+pnpm lefthook install
 ```
 
 ## Scripts disponiveis
@@ -135,3 +172,4 @@ npm run test
 - O projeto usa aliases de import (`@/...`).
 - O tema global (cores/tokens) esta em `src/index.css`.
 - Parte dos dados e estados ainda esta baseada em mocks para acelerar iteracoes de UI.
+- O worker do MSW esta em `public/mockServiceWorker.js` e handlers em `src/core/mocks/handlers.ts`.

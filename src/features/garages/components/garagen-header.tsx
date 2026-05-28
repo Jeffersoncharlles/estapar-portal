@@ -18,7 +18,7 @@ export const GaragenHeader = ({
 	total,
 }: GaragenHeaderProps) => {
 	return (
-		<Card.Root className="rounded-md p-4 md:p-5">
+		<Card.Root className="rounded-md p-4 md:p-5 hover:bg-white">
 			<div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
 				<div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
 					<Switch
