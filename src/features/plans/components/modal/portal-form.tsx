@@ -1,8 +1,6 @@
-import * as Select from "@radix-ui/react-select"
-import { CalendarDays, Check, ChevronDown } from "lucide-react"
-import { useEffect, useRef, useState } from "react"
-import { DayPicker } from "react-day-picker"
-import "react-day-picker/style.css"
+import { useState } from "react"
+import { DatePicker } from "@/components/ui/date-picker"
+import { Select } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
 
 export const PortalForm = () => {
@@ -14,10 +12,6 @@ export const PortalForm = () => {
 		new Date(),
 	)
 	const [validityEndDate, setValidityEndDate] = useState<Date | undefined>()
-	const [isStartCalendarOpen, setIsStartCalendarOpen] = useState(false)
-	const [isEndCalendarOpen, setIsEndCalendarOpen] = useState(false)
-	const startCalendarContainerRef = useRef<HTMLDivElement>(null)
-	const endCalendarContainerRef = useRef<HTMLDivElement>(null)
 
 	const formatBRLFromDigits = (digits: string) => {
 		const valueInCents = Number(digits || "0")
@@ -40,38 +34,6 @@ export const PortalForm = () => {
 		const digits = value.replace(/\D/g, "")
 		setCancelValue(formatBRLFromDigits(digits))
 	}
-
-	const formatDateBR = (date?: Date) => {
-		if (!date) return ""
-		return new Intl.DateTimeFormat("pt-BR").format(date)
-	}
-
-	useEffect(() => {
-		const handlePointerDownOutside = (event: MouseEvent) => {
-			const target = event.target as Node
-
-			if (
-				isStartCalendarOpen &&
-				startCalendarContainerRef.current &&
-				!startCalendarContainerRef.current.contains(target)
-			) {
-				setIsStartCalendarOpen(false)
-			}
-
-			if (
-				isEndCalendarOpen &&
-				endCalendarContainerRef.current &&
-				!endCalendarContainerRef.current.contains(target)
-			) {
-				setIsEndCalendarOpen(false)
-			}
-		}
-
-		document.addEventListener("mousedown", handlePointerDownOutside)
-		return () => {
-			document.removeEventListener("mousedown", handlePointerDownOutside)
-		}
-	}, [isStartCalendarOpen, isEndCalendarOpen])
 
 	return (
 		<div className="grid gap-4 px-5 py-5 md:grid-cols-2 md:gap-5 md:px-6 md:py-6">
@@ -118,44 +80,35 @@ export const PortalForm = () => {
 			</div>
 
 			<div className="space-y-1.5 md:col-start-1">
-				{/* biome-ignore lint/a11y/noLabelWithoutControl: visual label for Radix trigger */}
-				<label className="text-xs font-medium uppercase tracking-wide text-sheet-table-head-text">
+				<label
+					htmlFor="type-carros"
+					className="text-xs font-medium uppercase tracking-wide text-sheet-table-head-text"
+				>
 					Tipo de veiculo
 				</label>
 				<Select.Root defaultValue="carro">
-					<Select.Trigger className="inline-flex h-10 w-full items-center justify-between rounded-md border border-muted-border bg-card px-3 text-sm text-sheet-table-text outline-none transition-colors focus:ring-2 focus:ring-ring">
+					<Select.Trigger
+						id="type-carros"
+						className="border-muted-border bg-card text-sheet-table-text"
+					>
 						<Select.Value placeholder="Selecione" />
-						<Select.Icon className="text-sheet-table-action">
-							<ChevronDown size={16} />
-						</Select.Icon>
 					</Select.Trigger>
-					<Select.Portal>
-						<Select.Content
-							position="popper"
-							sideOffset={6}
-							className="z-[60] overflow-hidden rounded-md border border-muted-border bg-card shadow-lg"
-						>
-							<Select.Viewport className="p-1">
-								{[
-									["carro", "Carro"],
-									["moto", "Moto"],
-									["suv", "SUV"],
-									["utilitario", "Utilitario"],
-								].map(([value, label]) => (
-									<Select.Item
-										key={value}
-										value={value}
-										className="relative flex h-9 cursor-pointer items-center rounded px-8 text-sm text-sheet-table-text outline-none data-[highlighted]:bg-background-secondary"
-									>
-										<Select.ItemIndicator className="absolute left-2 inline-flex items-center text-sheet-table-action">
-											<Check size={14} />
-										</Select.ItemIndicator>
-										<Select.ItemText>{label}</Select.ItemText>
-									</Select.Item>
-								))}
-							</Select.Viewport>
-						</Select.Content>
-					</Select.Portal>
+					<Select.Content className="border-muted-border bg-card">
+						{[
+							["carro", "Carro"],
+							["moto", "Moto"],
+							["suv", "SUV"],
+							["utilitario", "Utilitario"],
+						].map(([value, label]) => (
+							<Select.Item
+								key={value}
+								value={value}
+								className="text-sheet-table-text"
+							>
+								{label}
+							</Select.Item>
+						))}
+					</Select.Content>
 				</Select.Root>
 			</div>
 
@@ -193,47 +146,19 @@ export const PortalForm = () => {
 					className="h-10 w-full rounded-md border border-muted-border bg-card px-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:ring-2 focus:ring-ring"
 				/>
 
-				<div
-					ref={startCalendarContainerRef}
-					className="relative mt-3 space-y-1.5"
-				>
+				<div className="relative mt-3 space-y-1.5">
 					<label
 						htmlFor="validity-start"
 						className="text-xs font-medium uppercase tracking-wide text-sheet-table-head-text"
 					>
 						Inicio da validade
 					</label>
-					<div className="relative">
-						<input
-							id="validity-start"
-							type="text"
-							readOnly
-							value={formatDateBR(validityStartDate)}
-							onClick={() => setIsStartCalendarOpen((prev) => !prev)}
-							placeholder="Selecione uma data"
-							className="h-10 w-full cursor-pointer rounded-md border border-muted-border bg-card px-3 pr-10 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:ring-2 focus:ring-ring"
-						/>
-						<button
-							type="button"
-							onClick={() => setIsStartCalendarOpen((prev) => !prev)}
-							className="absolute right-3 top-1/2 -translate-y-1/2 text-sheet-table-action"
-							aria-label="Abrir calendario de inicio"
-						>
-							<CalendarDays size={16} />
-						</button>
-						{isStartCalendarOpen ? (
-							<div className="absolute bottom-[calc(100%+0.5rem)] left-0 z-[100] rounded-md border border-muted-border bg-card p-2 shadow-lg">
-								<DayPicker
-									mode="single"
-									selected={validityStartDate}
-									onSelect={(date) => {
-										setValidityStartDate(date)
-										setIsStartCalendarOpen(false)
-									}}
-								/>
-							</div>
-						) : null}
-					</div>
+					<DatePicker
+						id="validity-start"
+						value={validityStartDate}
+						onChange={setValidityStartDate}
+						ariaLabel="Abrir calendario de inicio"
+					/>
 				</div>
 			</div>
 
@@ -253,47 +178,19 @@ export const PortalForm = () => {
 					className="h-10 w-full rounded-md border border-muted-border bg-card px-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:ring-2 focus:ring-ring"
 				/>
 
-				<div
-					ref={endCalendarContainerRef}
-					className="relative mt-3 space-y-1.5"
-				>
+				<div className="relative mt-3 space-y-1.5">
 					<label
 						htmlFor="validity-end"
 						className="text-xs font-medium uppercase tracking-wide text-sheet-table-head-text"
 					>
 						Fim da validade
 					</label>
-					<div className="relative">
-						<input
-							id="validity-end"
-							type="text"
-							readOnly
-							value={formatDateBR(validityEndDate)}
-							onClick={() => setIsEndCalendarOpen((prev) => !prev)}
-							placeholder="Selecione uma data"
-							className="h-10 w-full cursor-pointer rounded-md border border-muted-border bg-card px-3 pr-10 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:ring-2 focus:ring-ring"
-						/>
-						<button
-							type="button"
-							onClick={() => setIsEndCalendarOpen((prev) => !prev)}
-							className="absolute right-3 top-1/2 -translate-y-1/2 text-sheet-table-action"
-							aria-label="Abrir calendario de fim"
-						>
-							<CalendarDays size={16} />
-						</button>
-						{isEndCalendarOpen ? (
-							<div className="absolute bottom-[calc(100%+0.5rem)] left-0 z-[100] rounded-md border border-muted-border bg-card p-2 shadow-lg">
-								<DayPicker
-									mode="single"
-									selected={validityEndDate}
-									onSelect={(date) => {
-										setValidityEndDate(date)
-										setIsEndCalendarOpen(false)
-									}}
-								/>
-							</div>
-						) : null}
-					</div>
+					<DatePicker
+						id="validity-end"
+						value={validityEndDate}
+						onChange={setValidityEndDate}
+						ariaLabel="Abrir calendario de fim"
+					/>
 				</div>
 			</div>
 		</div>

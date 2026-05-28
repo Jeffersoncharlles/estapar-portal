@@ -94,7 +94,7 @@ const SheetPlansBody = ({
 					availableSpots={availableSpots}
 				/>
 
-				<div className="relative mt-auto shrink-0 bg-card pt-[1.5px] md:grid md:h-[40%] md:min-h-[220px] md:grid-cols-[120px_1fr] md:gap-3">
+				<div className="relative mt-auto shrink-0 bg-card pt-[1.5px] md:grid md:h-[40%] md:min-h-55 md:grid-cols-[140px_1fr] md:gap-3">
 					<Separator.Root
 						orientation="horizontal"
 						className="pointer-events-none absolute left-0 top-0 h-[1.5px] w-full bg-sidebar-border"

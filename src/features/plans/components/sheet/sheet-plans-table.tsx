@@ -1,5 +1,6 @@
 import { Check, FilePenLine } from "lucide-react"
 import { useState } from "react"
+import { Table } from "@/components/ui/table"
 import type { GaragePlan } from "@/core/mocks/garage-plans"
 import { PortalModal } from "../modal/portal-plan"
 
@@ -31,78 +32,78 @@ export const SheetPlansTable = ({
 				</div>
 
 				<div className="max-h-[calc(100%-2.5rem)] overflow-auto rounded border border-sheet-table-border bg-card">
-					<table className="w-full text-left text-xs text-sheet-table-text">
-						<thead className="sticky top-0 bg-card text-sheet-table-head-text">
-							<tr>
-								<th className="px-3 py-2 font-medium">Descricao</th>
-								<th className="px-3 py-2 font-medium">Valor</th>
-								<th className="px-3 py-2 font-medium">Vagas</th>
-								<th className="px-3 py-2 font-medium">Ocupadas</th>
-								<th className="px-3 py-2 font-medium">Disponiveis</th>
-								<th className="px-3 py-2 font-medium">Status</th>
-								<th className="px-3 py-2 font-medium">Acoes</th>
-							</tr>
-						</thead>
-						<tbody>
+					<Table.Root className="text-xs text-sheet-table-text">
+						<Table.Head className="sticky top-0 bg-card text-sheet-table-head-text">
+							<Table.Row>
+								<Table.HeadCell className="px-3 py-2">Descricao</Table.HeadCell>
+								<Table.HeadCell className="px-3 py-2">Valor</Table.HeadCell>
+								<Table.HeadCell className="px-3 py-2">Vagas</Table.HeadCell>
+								<Table.HeadCell className="px-3 py-2">Ocupadas</Table.HeadCell>
+								<Table.HeadCell className="px-3 py-2">Disponiveis</Table.HeadCell>
+								<Table.HeadCell className="px-3 py-2">Status</Table.HeadCell>
+								<Table.HeadCell className="px-3 py-2">Acoes</Table.HeadCell>
+							</Table.Row>
+						</Table.Head>
+						<Table.Body>
 							{plans.length > 0 ? (
 								plans.map((plan) => {
 									const totalByType = plan.totalSpotsByVehicleType ?? 0
 									return (
-										<tr
+										<Table.Row
 											key={`${plan.garageId}`}
 											className="border-t border-sheet-table-row-border transition-colors hover:bg-background-secondary"
 										>
-											<td className="px-3 py-2">
+											<Table.BodyCell className="px-3 py-2">
 												{plan.description || "Nao disponivel"}
-											</td>
-											<td className="px-3 py-2">
+											</Table.BodyCell>
+											<Table.BodyCell className="px-3 py-2">
 												{plan.price
 													? formatCurrency(plan.price)
 													: "Nao disponivel"}
-											</td>
-											<td className="px-3 py-2">{totalByType}</td>
-											<td className="px-3 py-2">0</td>
-											<td className="px-3 py-2">{totalByType}</td>
-											<td className="px-3 py-2">
+											</Table.BodyCell>
+											<Table.BodyCell className="px-3 py-2">{totalByType}</Table.BodyCell>
+											<Table.BodyCell className="px-3 py-2">0</Table.BodyCell>
+											<Table.BodyCell className="px-3 py-2">{totalByType}</Table.BodyCell>
+											<Table.BodyCell className="px-3 py-2">
 												<span className="inline-flex rounded-full bg-sheet-table-status-bg px-2 py-0.5 text-[10px]">
 													Nao disponivel
 												</span>
-											</td>
-											<td className="px-3 py-2">
+											</Table.BodyCell>
+											<Table.BodyCell className="px-3 py-2">
 												<button
 													type="button"
 													className="text-sheet-table-action hover:text-sheet-table-action-hover"
 												>
 													<Check size={14} />
 												</button>
-											</td>
-										</tr>
+											</Table.BodyCell>
+										</Table.Row>
 									)
 								})
 							) : (
-								<tr className="border-t border-sheet-table-row-border transition-colors hover:bg-background-secondary">
-									<td className="px-3 py-2">Nao disponivel</td>
-									<td className="px-3 py-2">Nao disponivel</td>
-									<td className="px-3 py-2">0</td>
-									<td className="px-3 py-2">0</td>
-									<td className="px-3 py-2">0</td>
-									<td className="px-3 py-2">
+								<Table.Row className="border-t border-sheet-table-row-border transition-colors hover:bg-background-secondary">
+									<Table.BodyCell className="px-3 py-2">Nao disponivel</Table.BodyCell>
+									<Table.BodyCell className="px-3 py-2">Nao disponivel</Table.BodyCell>
+									<Table.BodyCell className="px-3 py-2">0</Table.BodyCell>
+									<Table.BodyCell className="px-3 py-2">0</Table.BodyCell>
+									<Table.BodyCell className="px-3 py-2">0</Table.BodyCell>
+									<Table.BodyCell className="px-3 py-2">
 										<span className="inline-flex rounded-full bg-sheet-table-status-bg px-2 py-0.5 text-[10px]">
 											Nao disponivel
 										</span>
-									</td>
-									<td className="px-3 py-2">
+									</Table.BodyCell>
+									<Table.BodyCell className="px-3 py-2">
 										<button
 											type="button"
 											className="text-sheet-table-action hover:text-sheet-table-action-hover cursor-pointer"
 										>
 											<FilePenLine size={14} />
 										</button>
-									</td>
-								</tr>
+									</Table.BodyCell>
+								</Table.Row>
 							)}
-						</tbody>
-					</table>
+						</Table.Body>
+					</Table.Root>
 				</div>
 			</div>
 
