@@ -1,7 +1,7 @@
-import { ButtonSheet } from "@/components/ui/button-sheat"
+import { Eye } from "lucide-react"
+import { useNavigate } from "react-router"
+import { Button } from "@/components/ui/button"
 import { Table } from "@/components/ui/table"
-
-import { SheetPlans } from "@/features/plans/components/sheet/sheet-plans"
 import type { GaragensResponse } from "../types/garagen-api"
 
 interface GaragenTableProps {
@@ -9,6 +9,8 @@ interface GaragenTableProps {
 }
 
 export const GaragenTable = ({ items }: GaragenTableProps) => {
+	const navigate = useNavigate()
+
 	return (
 		<div className="overflow-hidden rounded-md border border-muted-border bg-white">
 			<div className="overflow-x-auto">
@@ -44,11 +46,16 @@ export const GaragenTable = ({ items }: GaragenTableProps) => {
 								<Table.BodyCell className="px-4 py-3 text-muted-foreground">
 									{garage.regional}
 								</Table.BodyCell>
-								<Table.BodyCell className="px-4 py-3 text-right">
-									<ButtonSheet>
-										<SheetPlans mode="sheet" garageId={garage.id} />
-									</ButtonSheet>
-								</Table.BodyCell>
+							<Table.BodyCell className="px-4 py-3 text-right">
+								<Button
+									type="button"
+									variant="icon"
+									size="icon"
+									onClick={() => navigate(`/garagens/${garage.id}/planos`)}
+								>
+									<Eye />
+								</Button>
+							</Table.BodyCell>
 							</Table.Row>
 						))}
 					</Table.Body>

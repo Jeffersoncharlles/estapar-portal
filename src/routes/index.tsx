@@ -5,12 +5,10 @@ import {
 } from "@/core/middlewares/auth"
 import { SignInEventsAction } from "@/features/auth/api/sign-in-events"
 import { garagensLoader } from "@/features/garages/api/garages-events"
-import { SheetPlans } from "@/features/plans/components/sheet/sheet-plans"
 import { AuthLayout } from "@/layouts/auth"
 import { DashboardLayout } from "@/layouts/dashboard"
 import { GaragePage } from "@/pages/garage"
 import { HomePage } from "@/pages/home"
-import { PlanDetails } from "@/pages/plan-details"
 import { SignInPage } from "@/pages/sign-in"
 
 export const AppRoutes = () => {
@@ -41,14 +39,9 @@ export const AppRoutes = () => {
 					loader: garagensLoader,
 				},
 				{
-					path: "/plans",
-					element: <PlanDetails />,
-					children: [
-						{
-							path: ":planId",
-							element: <SheetPlans />,
-						},
-					],
+					path: "/garagens/:garageId/planos",
+					element: <GaragePage />,
+					loader: garagensLoader,
 				},
 			],
 		},

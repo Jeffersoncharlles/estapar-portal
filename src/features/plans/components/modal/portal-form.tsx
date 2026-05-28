@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useState } from "react"
-import { useForm } from "react-hook-form"
+import { Controller, useForm } from "react-hook-form"
 import { z } from "zod"
 import { DatePicker } from "@/components/ui/date-picker"
 import { Input } from "@/components/ui/input"
@@ -11,65 +10,93 @@ const portalFormSchema = z.object({
 	description: z.string().min(1, "A descrição é obrigatória"),
 	isActive: z.boolean(),
 	vehicleType: z.enum(["carro", "moto", "suv", "utilitario"]),
-	totalSpots: z
-		.string()
-		.regex(/^\d+$/, "Total de vagas deve conter apenas números"),
-	monthlyValue: z
-		.string()
-		.regex(/^\d+$/, "Valor mensal deve conter apenas números"),
-	cancelValue: z
-		.string()
-		.regex(/^\d+$/, "Valor de cancelamento deve conter apenas números"),
-	validityStartDate: z.date().optional(),
-	validityEndDate: z.date().optional(),
+	totalSpots: z.number().int().nonnegative(),
+	monthlyValue: z.number().int().nonnegative(),
+	cancelValue: z.number().int().nonnegative(),
+	validityStartDate: z
+		.date()
+		.optional()
+		.transform((value) => (value ? value.getTime() : undefined)),
+	validityEndDate: z
+		.date()
+		.optional()
+		.transform((value) => (value ? value.getTime() : undefined)),
 })
 
-type PortalFormData = z.infer<typeof portalFormSchema>
+type PortalFormInput = z.input<typeof portalFormSchema>
+type PortalFormOutput = z.output<typeof portalFormSchema>
 
-export const PortalForm = () => {
-	const {
-		register,
-		handleSubmit,
-		formState: { errors },
-	} = useForm<PortalFormData>({
+type PortalFormDateValue = Date | number | string | undefined
+
+interface PortalFormInitialData {
+	description?: string
+	isActive?: boolean
+	vehicleType?: PortalFormInput["vehicleType"]
+	totalSpots?: number
+	monthlyValue?: number
+	cancelValue?: number
+	validityStartDate?: PortalFormDateValue
+	validityEndDate?: PortalFormDateValue
+}
+
+interface PortalFormProps {
+	initialData?: PortalFormInitialData
+}
+
+const toDateValue = (value: PortalFormDateValue) => {
+	if (value === undefined || value === null || value === "") return undefined
+
+	if (value instanceof Date) {
+		return Number.isNaN(value.getTime()) ? undefined : value
+	}
+
+	if (typeof value === "number") {
+		const parsed = new Date(value)
+		return Number.isNaN(parsed.getTime()) ? undefined : parsed
+	}
+
+	const parsed = new Date(value)
+	return Number.isNaN(parsed.getTime()) ? undefined : parsed
+}
+
+export const PortalForm = ({ initialData }: PortalFormProps) => {
+	const { register, handleSubmit, control } = useForm<
+		PortalFormInput,
+		unknown,
+		PortalFormOutput
+	>({
 		resolver: zodResolver(portalFormSchema),
 		defaultValues: {
-			// Defina os valores padrão aqui, se necessário
+			description: initialData?.description ?? "Mensal Executivo",
+			isActive: initialData?.isActive ?? true,
+			vehicleType: initialData?.vehicleType ?? "carro",
+			totalSpots: initialData?.totalSpots ?? 0,
+			monthlyValue: initialData?.monthlyValue ?? 0,
+			cancelValue: initialData?.cancelValue ?? 0,
+			validityStartDate: toDateValue(initialData?.validityStartDate) ?? new Date(),
+			validityEndDate: toDateValue(initialData?.validityEndDate),
 		},
 	})
-	const [isActive, setIsActive] = useState(true)
-	const [totalSpots, setTotalSpots] = useState("120")
-	const [monthlyValue, setMonthlyValue] = useState("R$ 420,00")
-	const [cancelValue, setCancelValue] = useState("R$ 120,00")
-	const [validityStartDate, setValidityStartDate] = useState<Date | undefined>(
-		new Date(),
-	)
-	const [validityEndDate, setValidityEndDate] = useState<Date | undefined>()
 
-	const formatBRLFromDigits = (digits: string) => {
-		const valueInCents = Number(digits || "0")
+	const formatBRLFromCents = (valueInCents: number) => {
 		return new Intl.NumberFormat("pt-BR", {
 			style: "currency",
 			currency: "BRL",
 		}).format(valueInCents / 100)
 	}
 
-	const handleTotalSpotsChange = (value: string) => {
-		setTotalSpots(value.replace(/\D/g, ""))
-	}
+	const extractDigits = (value: string) => value.replace(/\D/g, "")
 
-	const handleMonthlyValueChange = (value: string) => {
-		const digits = value.replace(/\D/g, "")
-		setMonthlyValue(formatBRLFromDigits(digits))
-	}
-
-	const handleCancelValueChange = (value: string) => {
-		const digits = value.replace(/\D/g, "")
-		setCancelValue(formatBRLFromDigits(digits))
+	const handleOnSubmit = (data: PortalFormOutput) => {
+		console.log("Form data:", data)
 	}
 
 	return (
-		<div className="grid gap-4 px-5 py-5 md:grid-cols-2 md:gap-5 md:px-6 md:py-6">
+		<form
+			id="portal-plan-form"
+			onSubmit={handleSubmit(handleOnSubmit)}
+			className="grid gap-4 px-5 py-5 md:grid-cols-2 md:gap-5 md:px-6 md:py-6"
+		>
 			<div className="space-y-2">
 				<label
 					htmlFor="plan-description"
@@ -78,7 +105,7 @@ export const PortalForm = () => {
 					Descriçāo
 				</label>
 				<Input.Root>
-					<Input.Content id="plan-description" defaultValue="Mensal Executivo" />
+					<Input.Content id="plan-description" {...register("description")} />
 				</Input.Root>
 			</div>
 
@@ -91,21 +118,29 @@ export const PortalForm = () => {
 				</label>
 				<div className="flex h-10 ">
 					<div className="flex w-full items-center  gap-3">
-						<Switch
-							id="plan-status"
-							checked={isActive}
-							onCheckedChange={setIsActive}
-							aria-label="Status do plano"
+						<Controller
+							control={control}
+							name="isActive"
+							render={({ field }) => (
+								<>
+									<Switch
+										id="plan-status"
+										checked={field.value}
+										onCheckedChange={field.onChange}
+										aria-label="Status do plano"
+									/>
+									<span
+										className={`text-sm font-medium ${
+											field.value
+												? "text-sheet-stats-available-text"
+												: "text-sheet-table-text"
+										}`}
+									>
+										{field.value ? "Ativo" : "Desativado"}
+									</span>
+								</>
+							)}
 						/>
-						<span
-							className={`text-sm font-medium ${
-								isActive
-									? "text-sheet-stats-available-text"
-									: "text-sheet-table-text"
-							}`}
-						>
-							{isActive ? "Ativo" : "Desativado"}
-						</span>
 					</div>
 				</div>
 			</div>
@@ -117,30 +152,36 @@ export const PortalForm = () => {
 				>
 					Tipo de veiculo
 				</label>
-				<Select.Root defaultValue="carro">
-					<Select.Trigger
-						id="type-carros"
-						className="border-muted-border bg-card text-sheet-table-text"
-					>
-						<Select.Value placeholder="Selecione" />
-					</Select.Trigger>
-					<Select.Content className="border-muted-border bg-card">
-						{[
-							["carro", "Carro"],
-							["moto", "Moto"],
-							["suv", "SUV"],
-							["utilitario", "Utilitario"],
-						].map(([value, label]) => (
-							<Select.Item
-								key={value}
-								value={value}
-								className="text-sheet-table-text"
+				<Controller
+					control={control}
+					name="vehicleType"
+					render={({ field }) => (
+						<Select.Root value={field.value} onValueChange={field.onChange}>
+							<Select.Trigger
+								id="type-carros"
+								className="border-muted-border bg-card text-sheet-table-text"
 							>
-								{label}
-							</Select.Item>
-						))}
-					</Select.Content>
-				</Select.Root>
+								<Select.Value placeholder="Selecione" />
+							</Select.Trigger>
+							<Select.Content className="border-muted-border bg-card">
+								{[
+									["carro", "Carro"],
+									["moto", "Moto"],
+									["suv", "SUV"],
+									["utilitario", "Utilitario"],
+								].map(([value, label]) => (
+									<Select.Item
+										key={value}
+										value={value}
+										className="text-sheet-table-text"
+									>
+										{label}
+									</Select.Item>
+								))}
+							</Select.Content>
+						</Select.Root>
+					)}
+				/>
 			</div>
 
 			<div className="space-y-1.5">
@@ -150,16 +191,25 @@ export const PortalForm = () => {
 				>
 					Total de vagas
 				</label>
-				<Input.Root>
-					<Input.Content
-						id="total-spots"
-						type="text"
-						inputMode="numeric"
-						pattern="[0-9]*"
-						value={totalSpots}
-						onChange={(event) => handleTotalSpotsChange(event.target.value)}
-					/>
-				</Input.Root>
+				<Controller
+					control={control}
+					name="totalSpots"
+					render={({ field }) => (
+						<Input.Root>
+							<Input.Content
+								id="total-spots"
+								type="text"
+								inputMode="numeric"
+								pattern="[0-9]*"
+								value={String(field.value ?? "")}
+								onChange={(event) => {
+									const digits = extractDigits(event.target.value)
+									field.onChange(Number(digits || 0))
+								}}
+							/>
+						</Input.Root>
+					)}
+				/>
 			</div>
 
 			<div title="valor" className="space-y-1.5">
@@ -169,15 +219,24 @@ export const PortalForm = () => {
 				>
 					Valor (R$)
 				</label>
-				<Input.Root>
-					<Input.Content
-						id="monthly-value"
-						type="text"
-						inputMode="numeric"
-						value={monthlyValue}
-						onChange={(event) => handleMonthlyValueChange(event.target.value)}
-					/>
-				</Input.Root>
+				<Controller
+					control={control}
+					name="monthlyValue"
+					render={({ field }) => (
+						<Input.Root>
+							<Input.Content
+								id="monthly-value"
+								type="text"
+								inputMode="numeric"
+								value={formatBRLFromCents(field.value ?? 0)}
+								onChange={(event) => {
+									const digits = extractDigits(event.target.value)
+									field.onChange(Number(digits || 0))
+								}}
+							/>
+						</Input.Root>
+					)}
+				/>
 
 				<div className="relative mt-3 space-y-1.5">
 					<label
@@ -186,11 +245,17 @@ export const PortalForm = () => {
 					>
 						Inicio da validade
 					</label>
-					<DatePicker
-						id="validity-start"
-						value={validityStartDate}
-						onChange={setValidityStartDate}
-						ariaLabel="Abrir calendario de inicio"
+					<Controller
+						control={control}
+						name="validityStartDate"
+						render={({ field }) => (
+							<DatePicker
+								id="validity-start"
+								value={field.value}
+								onChange={field.onChange}
+								ariaLabel="Abrir calendario de inicio"
+							/>
+						)}
 					/>
 				</div>
 			</div>
@@ -202,15 +267,24 @@ export const PortalForm = () => {
 				>
 					Valor de Cancelamento (R$)
 				</label>
-				<Input.Root>
-					<Input.Content
-						id="cancel-value"
-						type="text"
-						inputMode="numeric"
-						value={cancelValue}
-						onChange={(event) => handleCancelValueChange(event.target.value)}
-					/>
-				</Input.Root>
+				<Controller
+					control={control}
+					name="cancelValue"
+					render={({ field }) => (
+						<Input.Root>
+							<Input.Content
+								id="cancel-value"
+								type="text"
+								inputMode="numeric"
+								value={formatBRLFromCents(field.value ?? 0)}
+								onChange={(event) => {
+									const digits = extractDigits(event.target.value)
+									field.onChange(Number(digits || 0))
+								}}
+							/>
+						</Input.Root>
+					)}
+				/>
 
 				<div className="relative mt-3 space-y-1.5">
 					<label
@@ -219,14 +293,20 @@ export const PortalForm = () => {
 					>
 						Fim da validade
 					</label>
-					<DatePicker
-						id="validity-end"
-						value={validityEndDate}
-						onChange={setValidityEndDate}
-						ariaLabel="Abrir calendario de fim"
+					<Controller
+						control={control}
+						name="validityEndDate"
+						render={({ field }) => (
+							<DatePicker
+								id="validity-end"
+								value={field.value}
+								onChange={field.onChange}
+								ariaLabel="Abrir calendario de fim"
+							/>
+						)}
 					/>
 				</div>
 			</div>
-		</div>
+		</form>
 	)
 }
