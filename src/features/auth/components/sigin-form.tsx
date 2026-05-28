@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Lock, User2 } from "lucide-react"
 import { useForm } from "react-hook-form"
-import { useActionData, useNavigation, useSubmit } from "react-router"
+import { useNavigation, useSubmit } from "react-router"
 import { z } from "zod"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -16,7 +16,6 @@ type SignInFormData = z.infer<typeof signInFormSchema>
 
 export const SignInForm = () => {
 	const submit = useSubmit()
-	const actionData = useActionData<{ error?: string } | undefined>()
 	const navigation = useNavigation()
 
 	const {

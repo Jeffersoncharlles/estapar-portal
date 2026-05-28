@@ -11,12 +11,14 @@ interface UseSaveGaragePlanMutationParams {
 	garageId: string
 	plan?: GaragePlan
 	onSuccess?: () => void
+	onError?: () => void
 }
 
 export const useSaveGaragePlanMutation = ({
 	garageId,
 	plan,
 	onSuccess,
+	onError,
 }: UseSaveGaragePlanMutationParams) => {
 	const queryClient = useQueryClient()
 
@@ -37,6 +39,9 @@ export const useSaveGaragePlanMutation = ({
 		onSuccess: () => {
 			queryClient.invalidateQueries({ queryKey: garagePlansQueryKey(garageId) })
 			onSuccess?.()
+		},
+		onError: () => {
+			onError?.()
 		},
 	})
 }
