@@ -1,11 +1,11 @@
 import { ButtonSheet } from "@/components/ui/button-sheat"
 import { Table } from "@/components/ui/table"
-import type { Garage } from "@/core/mocks/garages"
 
 import { SheetPlans } from "@/features/plans/components/sheet/sheet-plans"
+import type { GaragensResponse } from "../types/garagen-api"
 
 interface GaragenTableProps {
-	items: Garage[]
+	items: GaragensResponse
 }
 
 export const GaragenTable = ({ items }: GaragenTableProps) => {
@@ -25,7 +25,10 @@ export const GaragenTable = ({ items }: GaragenTableProps) => {
 					</Table.Head>
 					<Table.Body>
 						{items.map((garage) => (
-							<Table.Row key={garage.id} className="border-t border-muted-border">
+							<Table.Row
+								key={garage.id}
+								className="border-t border-muted-border"
+							>
 								<Table.BodyCell className="px-4 py-3 text-muted-foreground">
 									{garage.id}
 								</Table.BodyCell>
