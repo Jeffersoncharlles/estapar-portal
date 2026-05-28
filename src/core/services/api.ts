@@ -1,5 +1,6 @@
 import axios from "axios"
 import type { GaragePlan } from "@/core/mocks/garage-plans"
+import type { SaveGaragePlanPayload } from "@/features/plans/api/types"
 import type { AuthResponse } from "@/features/auth/types/auth-api"
 import type { GaragensResponse } from "@/features/garages/types/garagen-api"
 import type { GaragensDetailsResponse } from "@/features/plans/types/plans-api"
@@ -47,10 +48,33 @@ export async function fetchGarageDetails(garageId: string) {
 
 export async function fetchGaragePlans(garageId: string) {
 	try {
-		const response = await api.get<GaragePlan[]>(`/garagens/${garageId}/planos`)
+		const response = await api.get<GaragePlan[]>(`garagens/${garageId}/planos`)
 		return response.data
 	} catch (error) {
 		console.error("Error fetching garage plans:", error)
+		throw error
+	}
+}
+
+export async function createGaragePlan(payload: SaveGaragePlanPayload) {
+	try {
+		const response = await api.post<GaragePlan>("planos", payload)
+		return response.data
+	} catch (error) {
+		console.error("Error creating garage plan:", error)
+		throw error
+	}
+}
+
+export async function updateGaragePlan(payload: {
+	originalPlan: GaragePlan
+	nextPlan: SaveGaragePlanPayload
+}) {
+	try {
+		const response = await api.put<GaragePlan>("planos", payload)
+		return response.data
+	} catch (error) {
+		console.error("Error updating garage plan:", error)
 		throw error
 	}
 }

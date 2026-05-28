@@ -27,4 +27,3 @@ dist-ssr
 *.sw?
 
 req.txt
-/src/core/mocks/handlers.ts
