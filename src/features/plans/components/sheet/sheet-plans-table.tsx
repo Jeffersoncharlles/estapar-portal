@@ -54,7 +54,9 @@ export const SheetPlansTable = ({
 								<Table.HeadCell className="px-3 py-2">Valor</Table.HeadCell>
 								<Table.HeadCell className="px-3 py-2">Vagas</Table.HeadCell>
 								<Table.HeadCell className="px-3 py-2">Ocupadas</Table.HeadCell>
-								<Table.HeadCell className="px-3 py-2">Disponiveis</Table.HeadCell>
+								<Table.HeadCell className="px-3 py-2">
+									Disponiveis
+								</Table.HeadCell>
 								<Table.HeadCell className="px-3 py-2">Status</Table.HeadCell>
 								<Table.HeadCell className="px-3 py-2">Acoes</Table.HeadCell>
 							</Table.Row>
@@ -76,32 +78,40 @@ export const SheetPlansTable = ({
 													? formatCurrency(plan.price)
 													: "Nao disponivel"}
 											</Table.BodyCell>
-											<Table.BodyCell className="px-3 py-2">{totalByType}</Table.BodyCell>
+											<Table.BodyCell className="px-3 py-2">
+												{totalByType}
+											</Table.BodyCell>
 											<Table.BodyCell className="px-3 py-2">0</Table.BodyCell>
-											<Table.BodyCell className="px-3 py-2">{totalByType}</Table.BodyCell>
+											<Table.BodyCell className="px-3 py-2">
+												{totalByType}
+											</Table.BodyCell>
 											<Table.BodyCell className="px-3 py-2">
 												<span className="inline-flex rounded-full bg-sheet-table-status-bg px-2 py-0.5 text-[10px]">
 													Nao disponivel
 												</span>
 											</Table.BodyCell>
 											<Table.BodyCell className="px-3 py-2">
-											<Button
-												type="button"
-												variant="icon"
-												size="icon"
-												onClick={() => handleOpenEditPlanModal(plan)}
-												className="h-6 w-6 text-sheet-table-action hover:text-sheet-table-action-hover"
-											>
-												<SquarePen size={14} />
-											</Button>
+												<Button
+													type="button"
+													variant="icon"
+													size="icon"
+													onClick={() => handleOpenEditPlanModal(plan)}
+													className="h-6 w-6 text-sheet-table-action hover:text-sheet-table-action-hover"
+												>
+													<SquarePen size={14} />
+												</Button>
 											</Table.BodyCell>
 										</Table.Row>
 									)
 								})
 							) : (
 								<Table.Row className="border-t border-sheet-table-row-border transition-colors hover:bg-background-secondary">
-									<Table.BodyCell className="px-3 py-2">Nao disponivel</Table.BodyCell>
-									<Table.BodyCell className="px-3 py-2">Nao disponivel</Table.BodyCell>
+									<Table.BodyCell className="px-3 py-2">
+										Nao disponivel
+									</Table.BodyCell>
+									<Table.BodyCell className="px-3 py-2">
+										Nao disponivel
+									</Table.BodyCell>
 									<Table.BodyCell className="px-3 py-2">0</Table.BodyCell>
 									<Table.BodyCell className="px-3 py-2">0</Table.BodyCell>
 									<Table.BodyCell className="px-3 py-2">0</Table.BodyCell>
@@ -111,15 +121,15 @@ export const SheetPlansTable = ({
 										</span>
 									</Table.BodyCell>
 									<Table.BodyCell className="px-3 py-2">
-									<Button
-										type="button"
-										variant="icon"
-										size="icon"
-										disabled
-										className="h-6 w-6 text-sheet-table-action hover:text-sheet-table-action-hover"
-									>
+										<Button
+											type="button"
+											variant="icon"
+											size="icon"
+											disabled
+											className="h-6 w-6 text-sheet-table-action hover:text-sheet-table-action-hover"
+										>
 											<SquarePen size={14} />
-									</Button>
+										</Button>
 									</Table.BodyCell>
 								</Table.Row>
 							)}

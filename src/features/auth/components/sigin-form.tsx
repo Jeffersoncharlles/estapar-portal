@@ -1,7 +1,9 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Lock, User2 } from "lucide-react"
+import { useEffect } from "react"
 import { useForm } from "react-hook-form"
-import { useNavigation, useSubmit } from "react-router"
+import { useActionData, useNavigation, useSubmit } from "react-router"
+import { toast } from "sonner"
 import { z } from "zod"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -16,6 +18,7 @@ type SignInFormData = z.infer<typeof signInFormSchema>
 
 export const SignInForm = () => {
 	const submit = useSubmit()
+	const actionData = useActionData<{ error?: string } | undefined>()
 	const navigation = useNavigation()
 
 	const {
@@ -29,6 +32,14 @@ export const SignInForm = () => {
 	const onSubmit = (data: SignInFormData) => {
 		submit(data, { method: "post" })
 	}
+
+	useEffect(() => {
+		if (actionData?.error) {
+			toast.error(actionData.error, {
+				id: "sign-in-error",
+			})
+		}
+	}, [actionData])
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>

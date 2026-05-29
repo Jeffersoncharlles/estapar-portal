@@ -22,7 +22,9 @@ export const SheetPlansHeader = ({
 						{garageName}
 					</h2>
 				</div>
-				<p className="text-xs text-sheet-header-code md:text-sm">Codigo: {garageCode}</p>
+				<p className="text-xs text-sheet-header-code md:text-sm">
+					Codigo: {garageCode}
+				</p>
 			</div>
 			{isSheet ? (
 				<SheetClose asChild>

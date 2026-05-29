@@ -1,8 +1,8 @@
 import axios from "axios"
 import type { GaragePlan } from "@/core/mocks/garage-plans"
-import type { SaveGaragePlanPayload } from "@/features/plans/api/types"
 import type { AuthResponse } from "@/features/auth/types/auth-api"
 import type { GaragensResponse } from "@/features/garages/types/garagen-api"
+import type { SaveGaragePlanPayload } from "@/features/plans/api/types"
 import type { GaragensDetailsResponse } from "@/features/plans/types/plans-api"
 
 export const api = axios.create({

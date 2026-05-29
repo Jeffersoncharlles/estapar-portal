@@ -1,0 +1,43 @@
+name: CI (Integração Contínua)
+on: [pull_request]
+
+jobs:
+  validate:
+    name: Validar Código e Testes
+    runs-on: ubuntu-latest
+
+    env:
+      VITE_ENABLE_MOCKS: "true"
+      NODE_ENV: test
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Instalar Dependências
+        run: pnpm install --frozen-lockfile
+
+      - name: Verificar Estilo (Linter Biome)
+        run: pnpm lint
+
+      - name: Checagem de Tipagem (Typecheck)
+        run: pnpm typecheck
+
+      - name: Rodar Testes de Unidade (Vitest)
+        run: pnpm test
+
+      - name: Gerar Build de Produção
+        run: pnpm build

@@ -16,7 +16,8 @@ const variantClass: Record<ButtonVariant, string> = {
 		"border-sheet-cta-border bg-sheet-cta-bg text-sheet-cta-text hover:opacity-90",
 	outline:
 		"border-muted-border bg-card text-sheet-table-action hover:text-sheet-table-action-hover",
-	ghost: "border-transparent bg-transparent text-muted-foreground hover:text-foreground",
+	ghost:
+		"border-transparent bg-transparent text-muted-foreground hover:text-foreground",
 	icon: "border-transparent bg-transparent text-muted-foreground hover:text-foreground",
 }
 

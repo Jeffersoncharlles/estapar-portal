@@ -12,3 +12,5 @@ pre-push:
     lint:
       glob: "*.{ts,tsx}"
       run: pnpm biome lint {push_files}
+    test:
+      run: pnpm vitest related --run {push_files} --passWithNoTests --reporter=dot

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 80 80" role="img" aria-labelledby="title desc">
+  <title id="title">Ícone verde Estapar</title>
+  <desc id="desc">Somente o símbolo verde da logo Estapar, em SVG, com fundo transparente e composição quadrada para favicon.</desc>
+  <defs>
+    <linearGradient id="estaparGreen" x1="18" y1="12" x2="82" y2="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8ED25B"/>
+      <stop offset="0.55" stop-color="#96DA9E"/>
+      <stop offset="1" stop-color="#98DDBD"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#estaparGreen)" fill-rule="evenodd" clip-rule="evenodd" transform="translate(-13 -5)">
+    <path d="M81.00,10.75 L41.25,10.75 L41.00,11.00 L52.00,11.25 L40.25,11.75 L37.25,13.00 L34.50,15.75 L32.75,18.75 L32.25,22.25 L32.50,40.00 L32.00,40.75 L26.25,41.00 L22.25,42.75 L19.75,45.25 L17.75,49.25 L17.75,76.75 L30.25,77.00 L34.50,75.25 L38.00,71.25 L39.25,67.75 L39.25,48.00 L39.75,47.50 L72.00,47.50 L72.25,48.00 L75.00,48.00 L74.25,47.50 L77.00,46.25 L79.25,44.25 L81.00,41.75 L81.25,40.25 L82.00,39.25 L82.25,36.75 L82.25,12.75 L81.75,11.75 L80.50,11.25 L81.25,11.00 Z
+    M32.00,47.50 L32.25,66.75 L31.50,68.50 L30.00,69.75 L24.75,70.00 L24.50,51.25 L25.00,50.00 L26.50,48.25 L28.75,47.50 Z
+    M40.25,19.50 L41.00,20.00 L40.25,19.50 L42.00,18.50 L74.50,18.50 L75.00,19.00 L74.50,39.00 L73.50,40.25 L73.25,39.75 L72.50,39.75 L72.50,40.75 L39.75,40.75 L39.50,40.50 L40.25,40.00 L40.00,39.50 L39.75,40.25 L39.25,40.25 L39.25,22.00 Z"/>
+  </g>
+</svg>
