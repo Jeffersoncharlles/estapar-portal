@@ -43,7 +43,7 @@ src/
   layouts/            # Layouts (auth e dashboard)
   pages/              # Entradas de tela
   routes/             # Definicao das rotas
-  test/               # Setup global de testes
+  test/               # Setup global de testes e tests
 ```
 
 ### Padroes adotados
@@ -136,7 +136,7 @@ npm run preview
 - `dev`: inicia o Vite em desenvolvimento.
 - `build`: roda `tsc -b` e gera build com Vite.
 - `preview`: publica localmente o build gerado.
-- `lint`: executa `biome check`.
+- `lint`: executa `biome check src` (escopo apenas em `src`, excluindo `src/core/mocks`).
 - `format`: executa `biome format --write`.
 - `typecheck`: executa `tsc --noEmit --skipLibCheck`.
 - `test`: executa `vitest run`.
@@ -148,7 +148,10 @@ npm run preview
 - Testes com Vitest + Testing Library (`src/test/setup.ts`).
 - Hooks Git com Lefthook (`lefthook.yml`):
   - `pre-commit`: `pnpm biome format --write` nos arquivos staged.
-  - `pre-push`: `pnpm typecheck` e `pnpm biome lint {push_files}` para `*.ts` e `*.tsx`.
+  - `pre-push`:
+    - `pnpm typecheck`.
+    - `pnpm biome lint {push_files}` para `*.ts` e `*.tsx`.
+    - `pnpm vitest related --run {push_files} --passWithNoTests --reporter=dot`.
 
 Para instalar hooks localmente:
 
@@ -159,7 +162,7 @@ pnpm lefthook install
 ## Estado atual dos testes
 
 - A base de testes esta configurada.
-- No momento, nao ha suites `*.test.*` ou `*.spec.*` em `src`.
+- Suite de integracao ativa para autenticacao em `src/test/features/auth/sign-form.test.tsx`.
 
 ## Observacoes
 

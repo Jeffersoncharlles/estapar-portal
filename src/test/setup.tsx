@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { type RenderOptions, render as rtlRender } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
+import "@testing-library/jest-dom"
 import type React from "react"
 
 const createTestQueryClient = () =>
