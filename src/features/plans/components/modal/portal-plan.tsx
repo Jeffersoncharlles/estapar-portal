@@ -24,7 +24,9 @@ export const PortalModal = ({
 		garageId,
 		plan,
 		onSuccess: () => {
-			toast.success(plan ? "Plano atualizado com sucesso." : "Plano criado com sucesso.")
+			toast.success(
+				plan ? "Plano atualizado com sucesso." : "Plano criado com sucesso.",
+			)
 			onOpenChange(false)
 		},
 		onError: () => {

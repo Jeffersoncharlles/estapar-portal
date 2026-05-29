@@ -6,7 +6,11 @@ import { cn } from "@/core/shared/utils"
 interface SelectTriggerProps
 	extends ComponentProps<typeof SelectPrimitive.Trigger> {}
 
-const SelectTrigger = ({ className, children, ...props }: SelectTriggerProps) => {
+const SelectTrigger = ({
+	className,
+	children,
+	...props
+}: SelectTriggerProps) => {
 	return (
 		<SelectPrimitive.Trigger
 			className={cn(
@@ -28,7 +32,11 @@ const SelectTrigger = ({ className, children, ...props }: SelectTriggerProps) =>
 interface SelectContentProps
 	extends ComponentProps<typeof SelectPrimitive.Content> {}
 
-const SelectContent = ({ className, children, ...props }: SelectContentProps) => {
+const SelectContent = ({
+	className,
+	children,
+	...props
+}: SelectContentProps) => {
 	return (
 		<SelectPrimitive.Portal>
 			<SelectPrimitive.Content

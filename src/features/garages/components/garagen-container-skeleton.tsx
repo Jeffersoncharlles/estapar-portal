@@ -19,7 +19,7 @@ export const GaragenContainerSkeleton = () => {
 
 			<div className="overflow-hidden rounded-md border border-muted-border bg-white">
 				<div className="overflow-x-auto p-4 min-h-[70vh]">
-					<div className="min-w-[1100px] space-y-3">
+					<div className="min-w-275 space-y-3">
 						<div className="grid grid-cols-[120px_220px_1fr_180px_88px_56px] gap-4 px-4 py-2">
 							<Skeleton className="h-4 w-12" />
 							<Skeleton className="h-4 w-16" />
@@ -31,7 +31,7 @@ export const GaragenContainerSkeleton = () => {
 
 						{tableRows.map((_, index) => (
 							<div
-								key={`garage-row-skeleton-${index + 1}`}
+								key={`garage-row-skeleton-${index.toString() + 1}`}
 								className="grid grid-cols-[120px_220px_1fr_180px_88px_56px] gap-4 border-t border-muted-border px-4 py-3"
 							>
 								<Skeleton className="h-5 w-24" />

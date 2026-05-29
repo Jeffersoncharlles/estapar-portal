@@ -46,16 +46,16 @@ export const GaragenTable = ({ items }: GaragenTableProps) => {
 								<Table.BodyCell className="px-4 py-3 text-muted-foreground">
 									{garage.regional}
 								</Table.BodyCell>
-							<Table.BodyCell className="px-4 py-3 text-right">
-								<Button
-									type="button"
-									variant="icon"
-									size="icon"
-									onClick={() => navigate(`/garagens/${garage.id}/planos`)}
-								>
-									<Eye />
-								</Button>
-							</Table.BodyCell>
+								<Table.BodyCell className="px-4 py-3 text-right">
+									<Button
+										type="button"
+										variant="icon"
+										size="icon"
+										onClick={() => navigate(`/garagens/${garage.id}/planos`)}
+									>
+										<Eye />
+									</Button>
+								</Table.BodyCell>
 							</Table.Row>
 						))}
 					</Table.Body>

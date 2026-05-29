@@ -31,7 +31,10 @@ export const SheetPlansStats = ({
 			<Card.Root className="rounded border border-sheet-sidebar-border bg-white shadow px-4 py-6 hover:bg-white">
 				<p className="text-base text-sheet-stats-label">Disponiveis</p>
 				<p className="mt-2 flex items-center gap-1.5 text-2xl font-semibold text-sheet-stats-available-text">
-					<CircleDollarSign size={14} className="text-sheet-stats-available-icon" />
+					<CircleDollarSign
+						size={14}
+						className="text-sheet-stats-available-icon"
+					/>
 					{availableSpots}
 				</p>
 			</Card.Root>
