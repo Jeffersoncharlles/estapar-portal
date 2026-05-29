@@ -1,6 +1,11 @@
+import { isAxiosError } from "axios"
 import { data, redirect } from "react-router"
 import { z } from "zod"
 import { signIn } from "@/core/services/api"
+
+interface MswAuthErrorResponse {
+	message: string
+}
 
 const signInSchema = z.object({
 	userName: z.string().min(1, "O nome de usuário é obrigatório"),
@@ -34,7 +39,15 @@ export async function SignInEventsAction({ request }: { request: Request }) {
 		localStorage.setItem("@estapar:user", JSON.stringify(result.user))
 
 		return redirect("/")
-	} catch (error) {
+	} catch (error: unknown) {
+		if (isAxiosError<MswAuthErrorResponse>(error)) {
+			if (error.response?.status === 401) {
+				const serverMessage =
+					error.response.data?.message || "Usuário ou senha incorretos."
+				return data({ error: serverMessage }, { status: 401 })
+			}
+		}
+
 		return data(
 			{ error: "Falha na comunicação com o servidor." },
 			{ status: 500 },

@@ -40,7 +40,11 @@ export default defineConfig({
 						return "vendor-date"
 					}
 
-					if (id.includes("sonner") || id.includes("zod") || id.includes("react-hook-form")) {
+					if (
+						id.includes("sonner") ||
+						id.includes("zod") ||
+						id.includes("react-hook-form")
+					) {
 						return "vendor-forms"
 					}
 				},
@@ -55,6 +59,6 @@ export default defineConfig({
 	test: {
 		globals: true,
 		environment: "jsdom",
-		setupFiles: "./src/test/setup.ts",
+		setupFiles: "./src/test/setup.tsx",
 	},
 })
